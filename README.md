@@ -57,7 +57,7 @@ This system replaces that loop: upload a PCB image, receive a structured JSON re
 
 ## 🚀 Quick Start (End-to-End)
 
-This is the full path from a fresh clone to analyzing a board in the GUI. Run every command from the project root (`PCB_faultDetection/`) with your virtual environment activated. Later sections ([Setup & Installation](#-setup--installation), [Running the GUI](#-running-the-gui)) go deeper on each step.
+This is the full path from a fresh clone to analyzing a board in the GUI. Run every command from the project root (`PCB_fault_detector/`) with your virtual environment activated. Later sections ([Setup & Installation](#-setup--installation), [Running the GUI](#-running-the-gui)) go deeper on each step.
 
 ### 1. Environment
 
