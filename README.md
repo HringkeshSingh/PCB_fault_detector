@@ -10,7 +10,7 @@
 ![Ollama](https://img.shields.io/badge/Ollama-local%20LLM-000000)
 ![Build](https://img.shields.io/badge/Build-Phase%204%20of%206-yellowgreen)
 ![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen)
-![License](https://img.shields.io/badge/License-Unset-lightgrey)
+![License](https://img.shields.io/badge/License-MIT-green)
 
 ---
 
@@ -1005,7 +1005,7 @@ The real-photo fine-tuning set is derived from `VOC_PCB.zip`, a Pascal VOC–for
 
 ## 📄 License
 
-No LICENSE file is currently checked into this repository. Add one (e.g. MIT) before treating this project as open-source or distributing it externally.
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
 
 ---
 
