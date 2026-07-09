@@ -1,0 +1,62 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+*.egg
+.venv/
+venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Data & models (large files — keep locally, not in git)
+/data/raw/
+/data/processed/
+/data/processed_finetune/
+/VOC_PCB.zip
+
+# Models — track best.pt (pretrained) and metrics JSONs; ignore backups and training runs
+/models/*.pt
+!/models/best.pt
+/models/*.pth
+/models/deeppcb/
+/models/pcb_finetune_real*/
+/models/runs/
+/yolov8*.pt
+
+# ChromaDB
+/chroma_db/
+
+# Training artifacts
+runs/
+wandb/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment
+.env
+.env.*
+
+# Scratch / temp images
+scratch_*.png
+scratch_*.jpg
+l_light_*.jpg
+*.log
+vocab_dump.txt
+
+# Claude / agent config
+.claude/

@@ -1,0 +1,56 @@
+{
+  "status": "ok",
+  "class_names": [
+    "open",
+    "short",
+    "mousebite",
+    "spur",
+    "copper",
+    "pin-hole"
+  ],
+  "run_dir": "C:\\Users\\Vanshita Singh\\Desktop\\hringkesh\\PCB_faultDetection\\models\\pcb_finetune_real",
+  "map50": 0.5725465412242561,
+  "map50_95": 0.2722137057754547,
+  "precision": 0.742508679274238,
+  "recall": 0.5180261420793766,
+  "per_class": {
+    "open": {
+      "precision": 0.694453561132533,
+      "recall": 0.5384615384615384,
+      "ap50": 0.6059872001614546,
+      "map50_95": 0.2520623651293762
+    },
+    "short": {
+      "precision": 0.7605404479416895,
+      "recall": 0.5576344677175616,
+      "ap50": 0.663204001915156,
+      "map50_95": 0.3154485594898646
+    },
+    "mousebite": {
+      "precision": 0.5918036271199582,
+      "recall": 0.34935068131695285,
+      "ap50": 0.3825597481701626,
+      "map50_95": 0.154225173010225
+    },
+    "spur": {
+      "precision": 0.7035745990543942,
+      "recall": 0.36776681980855097,
+      "ap50": 0.43308318369475174,
+      "map50_95": 0.16570281290449404
+    },
+    "copper": {
+      "precision": 0.7394776615232327,
+      "recall": 0.30864197530864196,
+      "ap50": 0.37352730518483335,
+      "map50_95": 0.17797405116042553
+    },
+    "pin-hole": {
+      "precision": 0.9652021788736209,
+      "recall": 0.9863013698630136,
+      "ap50": 0.9769178082191782,
+      "map50_95": 0.5678692729583424
+    }
+  },
+  "results_csv": "C:\\Users\\Vanshita Singh\\Desktop\\hringkesh\\PCB_faultDetection\\models\\pcb_finetune_real\\results.csv",
+  "checkpoint_used": "best.pt"
+}

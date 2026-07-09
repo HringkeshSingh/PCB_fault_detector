@@ -1,0 +1,1806 @@
+{
+  "cases": [
+    {
+      "case_id": "PCB-CASE-0154",
+      "defect_class": "pin-hole",
+      "component_type": "thermal relief spoke",
+      "root_cause": "Insufficient cleaning after micro-etch left organic residue blocking plating at spoke junction",
+      "corrective_action": "Added alkaline cleaner stage and raised rinse conductivity setpoint",
+      "severity": 2,
+      "date_recorded": "2023-06-19",
+      "outcome_notes": "Peel strength test on spokes passed IPC criteria"
+    },
+    {
+      "case_id": "PCB-CASE-0056",
+      "defect_class": "short",
+      "component_type": "fine trace pair \u2014 battery sense lines",
+      "root_cause": "Solder bridge from excess paste deposit due to worn stencil aperture corners",
+      "corrective_action": "Stencil inspection every 500 prints and aperture corner re-cut",
+      "severity": 3,
+      "date_recorded": "2021-09-26",
+      "outcome_notes": "SPI volume readings stabilized within \u00b18% of nominal"
+    },
+    {
+      "case_id": "PCB-CASE-0070",
+      "defect_class": "mousebite",
+      "component_type": "outer-layer trace edge",
+      "root_cause": "Aggressive etching with oscillating pH caused lateral undercut (mouse bite) on trace sidewalls",
+      "corrective_action": "Stabilized etchant ORP and switched to controlled spray nozzle pattern",
+      "severity": 3,
+      "date_recorded": "2022-03-07",
+      "outcome_notes": "Cross-sections showed uniform trace width within \u00b110% of design"
+    },
+    {
+      "case_id": "PCB-CASE-0094",
+      "defect_class": "spur",
+      "component_type": "ground isolation gap",
+      "root_cause": "Incomplete etching due to photoresist scumming left isolated copper spur in clearance zone",
+      "corrective_action": "Added post-develop descum plasma step before etch",
+      "severity": 2,
+      "date_recorded": "2023-05-21",
+      "outcome_notes": "Optical inspection of clearance gaps clear on audit panels"
+    },
+    {
+      "case_id": "PCB-CASE-0032",
+      "defect_class": "short",
+      "component_type": "power plane clearance",
+      "root_cause": "Conductive ionic contamination from inadequate DI rinse created dendritic short under humidity",
+      "corrective_action": "Extended final rinse cycles and installed in-line resistivity monitoring above 10 M\u03a9\u00b7cm",
+      "severity": 3,
+      "date_recorded": "2022-10-01",
+      "outcome_notes": "HAST chamber retest passed after rinse SOP update"
+    },
+    {
+      "case_id": "PCB-CASE-0009",
+      "defect_class": "open",
+      "component_type": "fine-pitch pad \u2014 USB differential pair",
+      "root_cause": "Mechanical nick during depanelization severed trace at panel edge",
+      "corrective_action": "Switched to laser depanelization and added keep-out routing near break tabs",
+      "severity": 1,
+      "date_recorded": "2021-05-23",
+      "outcome_notes": "AOI false opens at panel edge dropped to zero over 500 boards"
+    },
+    {
+      "case_id": "PCB-CASE-0072",
+      "defect_class": "mousebite",
+      "component_type": "differential pair \u2014 analog input trace",
+      "root_cause": "Photoresist edge damage from particulate on exposure vacuum frame created notch defects",
+      "corrective_action": "Added frame cleaning between panels and HEPA upgrade on clean room",
+      "severity": 4,
+      "date_recorded": "2021-12-29",
+      "outcome_notes": "Particle count reduced; edge notch defects not seen in 200-panel run"
+    },
+    {
+      "case_id": "PCB-CASE-0028",
+      "defect_class": "open",
+      "component_type": "fine-pitch pad",
+      "root_cause": "Mechanical nick during depanelization severed trace at panel edge",
+      "corrective_action": "Switched to laser depanelization and added keep-out routing near break tabs",
+      "severity": 1,
+      "date_recorded": "2022-05-06",
+      "outcome_notes": "AOI false opens at panel edge dropped to zero over 500 boards"
+    },
+    {
+      "case_id": "PCB-CASE-0083",
+      "defect_class": "mousebite",
+      "component_type": "RF microstrip",
+      "root_cause": "Etch factor mismatch on high-current density areas at panel center",
+      "corrective_action": "Rebalanced cathode/anode geometry and throttled current density",
+      "severity": 4,
+      "date_recorded": "2024-09-20",
+      "outcome_notes": "Impedance TDR sweep within spec on RF test coupons"
+    },
+    {
+      "case_id": "PCB-CASE-0097",
+      "defect_class": "spur",
+      "component_type": "soldermask-defined pad edge",
+      "root_cause": "Misaligned second-side artwork left copper spur extending into mask opening",
+      "corrective_action": "Dual-sided alignment pins verified; LDI scaling compensation updated",
+      "severity": 4,
+      "date_recorded": "2024-06-08",
+      "outcome_notes": "Registration offset reduced below 25 \u00b5m on double-sided lot"
+    },
+    {
+      "case_id": "PCB-CASE-0095",
+      "defect_class": "spur",
+      "component_type": "test pad array",
+      "root_cause": "Partially developed resist island plated and etched into spur rather than clearing",
+      "corrective_action": "Developer temperature alarm limits tightened and agitation verified",
+      "severity": 2,
+      "date_recorded": "2024-02-16",
+      "outcome_notes": "Developer bath chemistry logged twice per shift"
+    },
+    {
+      "case_id": "PCB-CASE-0113",
+      "defect_class": "spur",
+      "component_type": "test pad array",
+      "root_cause": "Partially developed resist island plated and etched into spur rather than clearing",
+      "corrective_action": "Developer temperature alarm limits tightened and agitation verified",
+      "severity": 3,
+      "date_recorded": "2021-06-17",
+      "outcome_notes": "Developer bath chemistry logged twice per shift"
+    },
+    {
+      "case_id": "PCB-CASE-0034",
+      "defect_class": "short",
+      "component_type": "adjacent SMT pads \u2014 LVDS pair",
+      "root_cause": "Over-etching combined with solder mask misalignment left insufficient mask dam between pads",
+      "corrective_action": "Recalibrated LDI exposure dose and tightened solder mask develop time",
+      "severity": 3,
+      "date_recorded": "2021-02-13",
+      "outcome_notes": "Electrical test shorts between 0.4 mm pitch pads eliminated on validation lot"
+    },
+    {
+      "case_id": "PCB-CASE-0027",
+      "defect_class": "open",
+      "component_type": "BGA escape trace \u2014 clock line",
+      "root_cause": "Dry film photoresist lift-off during development exposed trace to over-etch",
+      "corrective_action": "Reduced developer concentration and added pre-develop adhesion bake",
+      "severity": 2,
+      "date_recorded": "2024-05-11",
+      "outcome_notes": "Micro-etch weight loss returned to nominal range"
+    },
+    {
+      "case_id": "PCB-CASE-0068",
+      "defect_class": "mousebite",
+      "component_type": "differential pair \u2014 DDR address line",
+      "root_cause": "Photoresist edge damage from particulate on exposure vacuum frame created notch defects",
+      "corrective_action": "Added frame cleaning between panels and HEPA upgrade on clean room",
+      "severity": 3,
+      "date_recorded": "2023-01-27",
+      "outcome_notes": "Particle count reduced; edge notch defects not seen in 200-panel run"
+    },
+    {
+      "case_id": "PCB-CASE-0058",
+      "defect_class": "short",
+      "component_type": "adjacent SMT pads \u2014 decoupling cap pads",
+      "root_cause": "Over-etching combined with solder mask misalignment left insufficient mask dam between pads",
+      "corrective_action": "Recalibrated LDI exposure dose and tightened solder mask develop time",
+      "severity": 2,
+      "date_recorded": "2024-01-07",
+      "outcome_notes": "Electrical test shorts between 0.4 mm pitch pads eliminated on validation lot"
+    },
+    {
+      "case_id": "PCB-CASE-0166",
+      "defect_class": "pin-hole",
+      "component_type": "thermal relief spoke",
+      "root_cause": "Insufficient cleaning after micro-etch left organic residue blocking plating at spoke junction",
+      "corrective_action": "Added alkaline cleaner stage and raised rinse conductivity setpoint",
+      "severity": 2,
+      "date_recorded": "2023-09-20",
+      "outcome_notes": "Peel strength test on spokes passed IPC criteria"
+    },
+    {
+      "case_id": "PCB-CASE-0108",
+      "defect_class": "spur",
+      "component_type": "test pad array",
+      "root_cause": "Partially developed resist island plated and etched into spur rather than clearing",
+      "corrective_action": "Developer temperature alarm limits tightened and agitation verified",
+      "severity": 3,
+      "date_recorded": "2024-10-01",
+      "outcome_notes": "Developer bath chemistry logged twice per shift"
+    },
+    {
+      "case_id": "PCB-CASE-0130",
+      "defect_class": "copper",
+      "component_type": "panel tooling hole vicinity \u2014 RF ground ring",
+      "root_cause": "Copper foil burr from routing bit deposited and pressed into laminate during layup",
+      "corrective_action": "Routing bit change interval halved and post-route compressed air blow-off added",
+      "severity": 5,
+      "date_recorded": "2023-11-25",
+      "outcome_notes": "Tooling zone AOI clean on 100 consecutive panels"
+    },
+    {
+      "case_id": "PCB-CASE-0101",
+      "defect_class": "spur",
+      "component_type": "high-density routing channel",
+      "root_cause": "Broken trace fragment from prior panel handling adhered and was laminated as foreign copper",
+      "corrective_action": "Enhanced pre-lamination panel wipe and ionizer bars at layup",
+      "severity": 2,
+      "date_recorded": "2022-11-19",
+      "outcome_notes": "Foreign material FOD checks added to layup checklist"
+    },
+    {
+      "case_id": "PCB-CASE-0141",
+      "defect_class": "copper",
+      "component_type": "soldermask clearance",
+      "root_cause": "Pinhole in dry film photoresist allowed electroplated copper nodule in mask-free zone",
+      "corrective_action": "Vacuum lamination pressure increased and film expiry tracking enforced",
+      "severity": 2,
+      "date_recorded": "2024-03-21",
+      "outcome_notes": "Nodule count per panel dropped from 3 avg to 0.1 avg"
+    },
+    {
+      "case_id": "PCB-CASE-0087",
+      "defect_class": "mousebite",
+      "component_type": "RF microstrip",
+      "root_cause": "Etch factor mismatch on high-current density areas at panel center",
+      "corrective_action": "Rebalanced cathode/anode geometry and throttled current density",
+      "severity": 4,
+      "date_recorded": "2023-05-31",
+      "outcome_notes": "Impedance TDR sweep within spec on RF test coupons"
+    },
+    {
+      "case_id": "PCB-CASE-0138",
+      "defect_class": "copper",
+      "component_type": "panel tooling hole vicinity",
+      "root_cause": "Copper foil burr from routing bit deposited and pressed into laminate during layup",
+      "corrective_action": "Routing bit change interval halved and post-route compressed air blow-off added",
+      "severity": 2,
+      "date_recorded": "2022-02-02",
+      "outcome_notes": "Tooling zone AOI clean on 100 consecutive panels"
+    },
+    {
+      "case_id": "PCB-CASE-0149",
+      "defect_class": "copper",
+      "component_type": "inner-layer prepreg window \u2014 castellation edge",
+      "root_cause": "Resin smear not fully removed before desmear left conductive path treated as spurious copper island",
+      "corrective_action": "Extended plasma desmear cycle and added permanganate desmear for high-aspect vias",
+      "severity": 3,
+      "date_recorded": "2021-12-22",
+      "outcome_notes": "Via chain resistance measurements within 5% of simulation"
+    },
+    {
+      "case_id": "PCB-CASE-0086",
+      "defect_class": "mousebite",
+      "component_type": "differential pair \u2014 I2C bus",
+      "root_cause": "Photoresist edge damage from particulate on exposure vacuum frame created notch defects",
+      "corrective_action": "Added frame cleaning between panels and HEPA upgrade on clean room",
+      "severity": 3,
+      "date_recorded": "2023-04-12",
+      "outcome_notes": "Particle count reduced; edge notch defects not seen in 200-panel run"
+    },
+    {
+      "case_id": "PCB-CASE-0020",
+      "defect_class": "open",
+      "component_type": "signal trace (outer layer)",
+      "root_cause": "Under-etch during subtractive etching left thin copper neck that opened after thermal cycling",
+      "corrective_action": "Increased etch time monitoring; recalibrated spray pressure on etch line",
+      "severity": 3,
+      "date_recorded": "2021-11-10",
+      "outcome_notes": "Etch rate verified hourly for one week; no recurrence on same lot style"
+    },
+    {
+      "case_id": "PCB-CASE-0135",
+      "defect_class": "copper",
+      "component_type": "panel tooling hole vicinity",
+      "root_cause": "Copper foil burr from routing bit deposited and pressed into laminate during layup",
+      "corrective_action": "Routing bit change interval halved and post-route compressed air blow-off added",
+      "severity": 2,
+      "date_recorded": "2022-05-30",
+      "outcome_notes": "Tooling zone AOI clean on 100 consecutive panels"
+    },
+    {
+      "case_id": "PCB-CASE-0016",
+      "defect_class": "open",
+      "component_type": "BGA escape trace",
+      "root_cause": "Dry film photoresist lift-off during development exposed trace to over-etch",
+      "corrective_action": "Reduced developer concentration and added pre-develop adhesion bake",
+      "severity": 3,
+      "date_recorded": "2022-03-12",
+      "outcome_notes": "Micro-etch weight loss returned to nominal range"
+    },
+    {
+      "case_id": "PCB-CASE-0091",
+      "defect_class": "spur",
+      "component_type": "high-density routing channel",
+      "root_cause": "Broken trace fragment from prior panel handling adhered and was laminated as foreign copper",
+      "corrective_action": "Enhanced pre-lamination panel wipe and ionizer bars at layup",
+      "severity": 1,
+      "date_recorded": "2021-02-20",
+      "outcome_notes": "Foreign material FOD checks added to layup checklist"
+    },
+    {
+      "case_id": "PCB-CASE-0147",
+      "defect_class": "copper",
+      "component_type": "impedance control stripe",
+      "root_cause": "Acid trap in CAD geometry caused localized plating buildup appearing as spurious copper",
+      "corrective_action": "CAM team revised acid trap angles and added teardrops on acute corners",
+      "severity": 3,
+      "date_recorded": "2024-03-10",
+      "outcome_notes": "Impedance coupons matched target within 2 ohms"
+    },
+    {
+      "case_id": "PCB-CASE-0004",
+      "defect_class": "open",
+      "component_type": "BGA escape trace \u2014 LED anode trace",
+      "root_cause": "Dry film photoresist lift-off during development exposed trace to over-etch",
+      "corrective_action": "Reduced developer concentration and added pre-develop adhesion bake",
+      "severity": 3,
+      "date_recorded": "2022-03-28",
+      "outcome_notes": "Micro-etch weight loss returned to nominal range"
+    },
+    {
+      "case_id": "PCB-CASE-0071",
+      "defect_class": "mousebite",
+      "component_type": "RF microstrip",
+      "root_cause": "Etch factor mismatch on high-current density areas at panel center",
+      "corrective_action": "Rebalanced cathode/anode geometry and throttled current density",
+      "severity": 4,
+      "date_recorded": "2024-06-25",
+      "outcome_notes": "Impedance TDR sweep within spec on RF test coupons"
+    },
+    {
+      "case_id": "PCB-CASE-0100",
+      "defect_class": "spur",
+      "component_type": "test pad array",
+      "root_cause": "Partially developed resist island plated and etched into spur rather than clearing",
+      "corrective_action": "Developer temperature alarm limits tightened and agitation verified",
+      "severity": 3,
+      "date_recorded": "2022-07-17",
+      "outcome_notes": "Developer bath chemistry logged twice per shift"
+    },
+    {
+      "case_id": "PCB-CASE-0115",
+      "defect_class": "spur",
+      "component_type": "ground isolation gap \u2014 keep-out zone",
+      "root_cause": "Incomplete etching due to photoresist scumming left isolated copper spur in clearance zone",
+      "corrective_action": "Added post-develop descum plasma step before etch",
+      "severity": 2,
+      "date_recorded": "2022-05-22",
+      "outcome_notes": "Optical inspection of clearance gaps clear on audit panels"
+    },
+    {
+      "case_id": "PCB-CASE-0158",
+      "defect_class": "pin-hole",
+      "component_type": "large copper pour",
+      "root_cause": "Entrapped air during panel entry into plating bath caused non-coating bubble defect",
+      "corrective_action": "Reduced entry angle and added cathode rod oscillation in plating tank",
+      "severity": 3,
+      "date_recorded": "2023-11-29",
+      "outcome_notes": "Plating thickness CV improved from 12% to 6%"
+    },
+    {
+      "case_id": "PCB-CASE-0099",
+      "defect_class": "spur",
+      "component_type": "soldermask-defined pad edge",
+      "root_cause": "Misaligned second-side artwork left copper spur extending into mask opening",
+      "corrective_action": "Dual-sided alignment pins verified; LDI scaling compensation updated",
+      "severity": 2,
+      "date_recorded": "2024-07-29",
+      "outcome_notes": "Registration offset reduced below 25 \u00b5m on double-sided lot"
+    },
+    {
+      "case_id": "PCB-CASE-0146",
+      "defect_class": "copper",
+      "component_type": "inner-layer prepreg window \u2014 ESD guard ring",
+      "root_cause": "Resin smear not fully removed before desmear left conductive path treated as spurious copper island",
+      "corrective_action": "Extended plasma desmear cycle and added permanganate desmear for high-aspect vias",
+      "severity": 5,
+      "date_recorded": "2023-07-12",
+      "outcome_notes": "Via chain resistance measurements within 5% of simulation"
+    },
+    {
+      "case_id": "PCB-CASE-0151",
+      "defect_class": "pin-hole",
+      "component_type": "thermal relief spoke \u2014 GND stitch via field",
+      "root_cause": "Insufficient cleaning after micro-etch left organic residue blocking plating at spoke junction",
+      "corrective_action": "Added alkaline cleaner stage and raised rinse conductivity setpoint",
+      "severity": 1,
+      "date_recorded": "2023-07-19",
+      "outcome_notes": "Peel strength test on spokes passed IPC criteria"
+    },
+    {
+      "case_id": "PCB-CASE-0180",
+      "defect_class": "pin-hole",
+      "component_type": "power plane",
+      "root_cause": "Void in electroless copper seed layer created pinhole that propagated through plate",
+      "corrective_action": "Replenished electroless chemistry and reduced bath contamination via filtration",
+      "severity": 2,
+      "date_recorded": "2022-06-27",
+      "outcome_notes": "Backlight inspection of planes showed full coverage on sample set"
+    },
+    {
+      "case_id": "PCB-CASE-0001",
+      "defect_class": "open",
+      "component_type": "signal trace (outer layer) \u2014 clock line",
+      "root_cause": "Under-etch during subtractive etching left thin copper neck that opened after thermal cycling",
+      "corrective_action": "Increased etch time monitoring; recalibrated spray pressure on etch line",
+      "severity": 2,
+      "date_recorded": "2022-07-18",
+      "outcome_notes": "Etch rate verified hourly for one week; no recurrence on same lot style"
+    },
+    {
+      "case_id": "PCB-CASE-0124",
+      "defect_class": "copper",
+      "component_type": "inner-layer prepreg window",
+      "root_cause": "Resin smear not fully removed before desmear left conductive path treated as spurious copper island",
+      "corrective_action": "Extended plasma desmear cycle and added permanganate desmear for high-aspect vias",
+      "severity": 4,
+      "date_recorded": "2021-12-27",
+      "outcome_notes": "Via chain resistance measurements within 5% of simulation"
+    },
+    {
+      "case_id": "PCB-CASE-0079",
+      "defect_class": "mousebite",
+      "component_type": "differential pair",
+      "root_cause": "Photoresist edge damage from particulate on exposure vacuum frame created notch defects",
+      "corrective_action": "Added frame cleaning between panels and HEPA upgrade on clean room",
+      "severity": 2,
+      "date_recorded": "2021-03-20",
+      "outcome_notes": "Particle count reduced; edge notch defects not seen in 200-panel run"
+    },
+    {
+      "case_id": "PCB-CASE-0163",
+      "defect_class": "pin-hole",
+      "component_type": "power plane \u2014 heat spreader plane",
+      "root_cause": "Void in electroless copper seed layer created pinhole that propagated through plate",
+      "corrective_action": "Replenished electroless chemistry and reduced bath contamination via filtration",
+      "severity": 4,
+      "date_recorded": "2023-11-20",
+      "outcome_notes": "Backlight inspection of planes showed full coverage on sample set"
+    },
+    {
+      "case_id": "PCB-CASE-0140",
+      "defect_class": "copper",
+      "component_type": "soldermask clearance",
+      "root_cause": "Pinhole in dry film photoresist allowed electroplated copper nodule in mask-free zone",
+      "corrective_action": "Vacuum lamination pressure increased and film expiry tracking enforced",
+      "severity": 3,
+      "date_recorded": "2021-09-16",
+      "outcome_notes": "Nodule count per panel dropped from 3 avg to 0.1 avg"
+    },
+    {
+      "case_id": "PCB-CASE-0067",
+      "defect_class": "mousebite",
+      "component_type": "connector finger",
+      "root_cause": "Brush plating contact mark combined with etch left edge irregularity mimicking mouse bite",
+      "corrective_action": "Relocated bus bar contact points away from critical edge geometry",
+      "severity": 1,
+      "date_recorded": "2021-08-18",
+      "outcome_notes": "Gold finger thickness uniform; edge AOI clean"
+    },
+    {
+      "case_id": "PCB-CASE-0065",
+      "defect_class": "mousebite",
+      "component_type": "outer-layer trace edge \u2014 shield trace",
+      "root_cause": "Aggressive etching with oscillating pH caused lateral undercut (mouse bite) on trace sidewalls",
+      "corrective_action": "Stabilized etchant ORP and switched to controlled spray nozzle pattern",
+      "severity": 1,
+      "date_recorded": "2022-07-21",
+      "outcome_notes": "Cross-sections showed uniform trace width within \u00b110% of design"
+    },
+    {
+      "case_id": "PCB-CASE-0143",
+      "defect_class": "copper",
+      "component_type": "soldermask clearance",
+      "root_cause": "Pinhole in dry film photoresist allowed electroplated copper nodule in mask-free zone",
+      "corrective_action": "Vacuum lamination pressure increased and film expiry tracking enforced",
+      "severity": 3,
+      "date_recorded": "2023-04-01",
+      "outcome_notes": "Nodule count per panel dropped from 3 avg to 0.1 avg"
+    },
+    {
+      "case_id": "PCB-CASE-0153",
+      "defect_class": "pin-hole",
+      "component_type": "large copper pour \u2014 GND stitch via field",
+      "root_cause": "Entrapped air during panel entry into plating bath caused non-coating bubble defect",
+      "corrective_action": "Reduced entry angle and added cathode rod oscillation in plating tank",
+      "severity": 1,
+      "date_recorded": "2021-10-19",
+      "outcome_notes": "Plating thickness CV improved from 12% to 6%"
+    },
+    {
+      "case_id": "PCB-CASE-0127",
+      "defect_class": "copper",
+      "component_type": "impedance control stripe",
+      "root_cause": "Acid trap in CAD geometry caused localized plating buildup appearing as spurious copper",
+      "corrective_action": "CAM team revised acid trap angles and added teardrops on acute corners",
+      "severity": 3,
+      "date_recorded": "2023-08-10",
+      "outcome_notes": "Impedance coupons matched target within 2 ohms"
+    },
+    {
+      "case_id": "PCB-CASE-0123",
+      "defect_class": "copper",
+      "component_type": "soldermask clearance",
+      "root_cause": "Pinhole in dry film photoresist allowed electroplated copper nodule in mask-free zone",
+      "corrective_action": "Vacuum lamination pressure increased and film expiry tracking enforced",
+      "severity": 3,
+      "date_recorded": "2023-01-12",
+      "outcome_notes": "Nodule count per panel dropped from 3 avg to 0.1 avg"
+    },
+    {
+      "case_id": "PCB-CASE-0103",
+      "defect_class": "spur",
+      "component_type": "high-density routing channel",
+      "root_cause": "Broken trace fragment from prior panel handling adhered and was laminated as foreign copper",
+      "corrective_action": "Enhanced pre-lamination panel wipe and ionizer bars at layup",
+      "severity": 3,
+      "date_recorded": "2023-04-30",
+      "outcome_notes": "Foreign material FOD checks added to layup checklist"
+    },
+    {
+      "case_id": "PCB-CASE-0156",
+      "defect_class": "pin-hole",
+      "component_type": "power plane \u2014 heat spreader plane",
+      "root_cause": "Void in electroless copper seed layer created pinhole that propagated through plate",
+      "corrective_action": "Replenished electroless chemistry and reduced bath contamination via filtration",
+      "severity": 3,
+      "date_recorded": "2022-10-23",
+      "outcome_notes": "Backlight inspection of planes showed full coverage on sample set"
+    },
+    {
+      "case_id": "PCB-CASE-0157",
+      "defect_class": "pin-hole",
+      "component_type": "large copper pour",
+      "root_cause": "Entrapped air during panel entry into plating bath caused non-coating bubble defect",
+      "corrective_action": "Reduced entry angle and added cathode rod oscillation in plating tank",
+      "severity": 4,
+      "date_recorded": "2024-10-08",
+      "outcome_notes": "Plating thickness CV improved from 12% to 6%"
+    },
+    {
+      "case_id": "PCB-CASE-0022",
+      "defect_class": "open",
+      "component_type": "BGA escape trace \u2014 reset net",
+      "root_cause": "Dry film photoresist lift-off during development exposed trace to over-etch",
+      "corrective_action": "Reduced developer concentration and added pre-develop adhesion bake",
+      "severity": 4,
+      "date_recorded": "2024-02-08",
+      "outcome_notes": "Micro-etch weight loss returned to nominal range"
+    },
+    {
+      "case_id": "PCB-CASE-0048",
+      "defect_class": "short",
+      "component_type": "ground pour region",
+      "root_cause": "Copper sliver left between pour and signal trace after CAM cleanup gap",
+      "corrective_action": "Updated CAM DRC to enforce minimum sliver removal width of 0.15 mm",
+      "severity": 3,
+      "date_recorded": "2023-05-17",
+      "outcome_notes": "CAM review checklist added; no slivers on next 30 designs"
+    },
+    {
+      "case_id": "PCB-CASE-0019",
+      "defect_class": "open",
+      "component_type": "fine-pitch pad \u2014 USB differential pair",
+      "root_cause": "Mechanical nick during depanelization severed trace at panel edge",
+      "corrective_action": "Switched to laser depanelization and added keep-out routing near break tabs",
+      "severity": 3,
+      "date_recorded": "2021-10-11",
+      "outcome_notes": "AOI false opens at panel edge dropped to zero over 500 boards"
+    },
+    {
+      "case_id": "PCB-CASE-0052",
+      "defect_class": "short",
+      "component_type": "power plane clearance",
+      "root_cause": "Conductive ionic contamination from inadequate DI rinse created dendritic short under humidity",
+      "corrective_action": "Extended final rinse cycles and installed in-line resistivity monitoring above 10 M\u03a9\u00b7cm",
+      "severity": 1,
+      "date_recorded": "2024-05-03",
+      "outcome_notes": "HAST chamber retest passed after rinse SOP update"
+    },
+    {
+      "case_id": "PCB-CASE-0116",
+      "defect_class": "spur",
+      "component_type": "high-density routing channel \u2014 antenna feed gap",
+      "root_cause": "Broken trace fragment from prior panel handling adhered and was laminated as foreign copper",
+      "corrective_action": "Enhanced pre-lamination panel wipe and ionizer bars at layup",
+      "severity": 3,
+      "date_recorded": "2021-09-16",
+      "outcome_notes": "Foreign material FOD checks added to layup checklist"
+    },
+    {
+      "case_id": "PCB-CASE-0053",
+      "defect_class": "short",
+      "component_type": "ground pour region",
+      "root_cause": "Copper sliver left between pour and signal trace after CAM cleanup gap",
+      "corrective_action": "Updated CAM DRC to enforce minimum sliver removal width of 0.15 mm",
+      "severity": 2,
+      "date_recorded": "2024-03-12",
+      "outcome_notes": "CAM review checklist added; no slivers on next 30 designs"
+    },
+    {
+      "case_id": "PCB-CASE-0117",
+      "defect_class": "spur",
+      "component_type": "high-density routing channel \u2014 fiducial vicinity",
+      "root_cause": "Broken trace fragment from prior panel handling adhered and was laminated as foreign copper",
+      "corrective_action": "Enhanced pre-lamination panel wipe and ionizer bars at layup",
+      "severity": 4,
+      "date_recorded": "2022-06-09",
+      "outcome_notes": "Foreign material FOD checks added to layup checklist"
+    },
+    {
+      "case_id": "PCB-CASE-0132",
+      "defect_class": "copper",
+      "component_type": "impedance control stripe \u2014 ESD guard ring",
+      "root_cause": "Acid trap in CAD geometry caused localized plating buildup appearing as spurious copper",
+      "corrective_action": "CAM team revised acid trap angles and added teardrops on acute corners",
+      "severity": 1,
+      "date_recorded": "2021-02-05",
+      "outcome_notes": "Impedance coupons matched target within 2 ohms"
+    },
+    {
+      "case_id": "PCB-CASE-0011",
+      "defect_class": "open",
+      "component_type": "inner-layer trace \u2014 reset net",
+      "root_cause": "Misregistration during lamination caused drill hit to miss pad center, removing connection",
+      "corrective_action": "Tightened lamination press temperature profile and X-ray drill alignment check",
+      "severity": 3,
+      "date_recorded": "2021-11-30",
+      "outcome_notes": "Registration drift held within 50 \u00b5m on subsequent inner layers"
+    },
+    {
+      "case_id": "PCB-CASE-0069",
+      "defect_class": "mousebite",
+      "component_type": "differential pair",
+      "root_cause": "Photoresist edge damage from particulate on exposure vacuum frame created notch defects",
+      "corrective_action": "Added frame cleaning between panels and HEPA upgrade on clean room",
+      "severity": 3,
+      "date_recorded": "2022-09-24",
+      "outcome_notes": "Particle count reduced; edge notch defects not seen in 200-panel run"
+    },
+    {
+      "case_id": "PCB-CASE-0035",
+      "defect_class": "short",
+      "component_type": "power plane clearance \u2014 decoupling cap pads",
+      "root_cause": "Conductive ionic contamination from inadequate DI rinse created dendritic short under humidity",
+      "corrective_action": "Extended final rinse cycles and installed in-line resistivity monitoring above 10 M\u03a9\u00b7cm",
+      "severity": 4,
+      "date_recorded": "2021-05-26",
+      "outcome_notes": "HAST chamber retest passed after rinse SOP update"
+    },
+    {
+      "case_id": "PCB-CASE-0105",
+      "defect_class": "spur",
+      "component_type": "ground isolation gap",
+      "root_cause": "Incomplete etching due to photoresist scumming left isolated copper spur in clearance zone",
+      "corrective_action": "Added post-develop descum plasma step before etch",
+      "severity": 1,
+      "date_recorded": "2023-09-04",
+      "outcome_notes": "Optical inspection of clearance gaps clear on audit panels"
+    },
+    {
+      "case_id": "PCB-CASE-0150",
+      "defect_class": "copper",
+      "component_type": "impedance control stripe \u2014 ESD guard ring",
+      "root_cause": "Acid trap in CAD geometry caused localized plating buildup appearing as spurious copper",
+      "corrective_action": "CAM team revised acid trap angles and added teardrops on acute corners",
+      "severity": 3,
+      "date_recorded": "2024-05-01",
+      "outcome_notes": "Impedance coupons matched target within 2 ohms"
+    },
+    {
+      "case_id": "PCB-CASE-0169",
+      "defect_class": "pin-hole",
+      "component_type": "large copper pour \u2014 heat spreader plane",
+      "root_cause": "Entrapped air during panel entry into plating bath caused non-coating bubble defect",
+      "corrective_action": "Reduced entry angle and added cathode rod oscillation in plating tank",
+      "severity": 3,
+      "date_recorded": "2022-08-21",
+      "outcome_notes": "Plating thickness CV improved from 12% to 6%"
+    },
+    {
+      "case_id": "PCB-CASE-0023",
+      "defect_class": "open",
+      "component_type": "signal trace (outer layer) \u2014 reset net",
+      "root_cause": "Under-etch during subtractive etching left thin copper neck that opened after thermal cycling",
+      "corrective_action": "Increased etch time monitoring; recalibrated spray pressure on etch line",
+      "severity": 2,
+      "date_recorded": "2024-08-05",
+      "outcome_notes": "Etch rate verified hourly for one week; no recurrence on same lot style"
+    },
+    {
+      "case_id": "PCB-CASE-0054",
+      "defect_class": "short",
+      "component_type": "via-in-pad",
+      "root_cause": "Insufficient solder mask tenting over via allowed paste wicking and bridge to adjacent pad",
+      "corrective_action": "Filled vias with epoxy fill and planarized before mask application",
+      "severity": 3,
+      "date_recorded": "2023-05-09",
+      "outcome_notes": "X-ray inspection confirmed no wicking on filled vias"
+    },
+    {
+      "case_id": "PCB-CASE-0042",
+      "defect_class": "short",
+      "component_type": "adjacent SMT pads",
+      "root_cause": "Over-etching combined with solder mask misalignment left insufficient mask dam between pads",
+      "corrective_action": "Recalibrated LDI exposure dose and tightened solder mask develop time",
+      "severity": 2,
+      "date_recorded": "2022-01-28",
+      "outcome_notes": "Electrical test shorts between 0.4 mm pitch pads eliminated on validation lot"
+    },
+    {
+      "case_id": "PCB-CASE-0102",
+      "defect_class": "spur",
+      "component_type": "high-density routing channel \u2014 antenna feed gap",
+      "root_cause": "Broken trace fragment from prior panel handling adhered and was laminated as foreign copper",
+      "corrective_action": "Enhanced pre-lamination panel wipe and ionizer bars at layup",
+      "severity": 3,
+      "date_recorded": "2022-04-19",
+      "outcome_notes": "Foreign material FOD checks added to layup checklist"
+    },
+    {
+      "case_id": "PCB-CASE-0155",
+      "defect_class": "pin-hole",
+      "component_type": "blind via capture pad",
+      "root_cause": "Laser drill debris not fully removed before plating seeded pinhole at capture pad center",
+      "corrective_action": "Ultrasonic clean after laser drill and vacuum desmear before metallization",
+      "severity": 3,
+      "date_recorded": "2023-10-22",
+      "outcome_notes": "Cross-section of blind vias showed continuous barrel without voids"
+    },
+    {
+      "case_id": "PCB-CASE-0017",
+      "defect_class": "open",
+      "component_type": "inner-layer trace",
+      "root_cause": "Misregistration during lamination caused drill hit to miss pad center, removing connection",
+      "corrective_action": "Tightened lamination press temperature profile and X-ray drill alignment check",
+      "severity": 2,
+      "date_recorded": "2022-06-27",
+      "outcome_notes": "Registration drift held within 50 \u00b5m on subsequent inner layers"
+    },
+    {
+      "case_id": "PCB-CASE-0144",
+      "defect_class": "copper",
+      "component_type": "soldermask clearance",
+      "root_cause": "Pinhole in dry film photoresist allowed electroplated copper nodule in mask-free zone",
+      "corrective_action": "Vacuum lamination pressure increased and film expiry tracking enforced",
+      "severity": 4,
+      "date_recorded": "2021-11-02",
+      "outcome_notes": "Nodule count per panel dropped from 3 avg to 0.1 avg"
+    },
+    {
+      "case_id": "PCB-CASE-0075",
+      "defect_class": "mousebite",
+      "component_type": "connector finger",
+      "root_cause": "Brush plating contact mark combined with etch left edge irregularity mimicking mouse bite",
+      "corrective_action": "Relocated bus bar contact points away from critical edge geometry",
+      "severity": 4,
+      "date_recorded": "2022-02-13",
+      "outcome_notes": "Gold finger thickness uniform; edge AOI clean"
+    },
+    {
+      "case_id": "PCB-CASE-0005",
+      "defect_class": "open",
+      "component_type": "signal trace (outer layer) \u2014 USB differential pair",
+      "root_cause": "Under-etch during subtractive etching left thin copper neck that opened after thermal cycling",
+      "corrective_action": "Increased etch time monitoring; recalibrated spray pressure on etch line",
+      "severity": 2,
+      "date_recorded": "2023-05-16",
+      "outcome_notes": "Etch rate verified hourly for one week; no recurrence on same lot style"
+    },
+    {
+      "case_id": "PCB-CASE-0126",
+      "defect_class": "copper",
+      "component_type": "panel tooling hole vicinity \u2014 heatsink attach area",
+      "root_cause": "Copper foil burr from routing bit deposited and pressed into laminate during layup",
+      "corrective_action": "Routing bit change interval halved and post-route compressed air blow-off added",
+      "severity": 4,
+      "date_recorded": "2022-05-18",
+      "outcome_notes": "Tooling zone AOI clean on 100 consecutive panels"
+    },
+    {
+      "case_id": "PCB-CASE-0040",
+      "defect_class": "short",
+      "component_type": "ground pour region",
+      "root_cause": "Copper sliver left between pour and signal trace after CAM cleanup gap",
+      "corrective_action": "Updated CAM DRC to enforce minimum sliver removal width of 0.15 mm",
+      "severity": 3,
+      "date_recorded": "2021-04-21",
+      "outcome_notes": "CAM review checklist added; no slivers on next 30 designs"
+    },
+    {
+      "case_id": "PCB-CASE-0006",
+      "defect_class": "open",
+      "component_type": "fine-pitch pad",
+      "root_cause": "Mechanical nick during depanelization severed trace at panel edge",
+      "corrective_action": "Switched to laser depanelization and added keep-out routing near break tabs",
+      "severity": 3,
+      "date_recorded": "2021-07-09",
+      "outcome_notes": "AOI false opens at panel edge dropped to zero over 500 boards"
+    },
+    {
+      "case_id": "PCB-CASE-0013",
+      "defect_class": "open",
+      "component_type": "PTH via barrel",
+      "root_cause": "Incomplete copper plating in via barrel due to air bubble entrapment during electroplating",
+      "corrective_action": "Enabled pulse plating and reduced panel rack density in plating tank",
+      "severity": 3,
+      "date_recorded": "2023-08-05",
+      "outcome_notes": "Cross-section microscopy on next 20 panels showed full barrel coverage"
+    },
+    {
+      "case_id": "PCB-CASE-0081",
+      "defect_class": "mousebite",
+      "component_type": "differential pair \u2014 I2C bus",
+      "root_cause": "Photoresist edge damage from particulate on exposure vacuum frame created notch defects",
+      "corrective_action": "Added frame cleaning between panels and HEPA upgrade on clean room",
+      "severity": 4,
+      "date_recorded": "2021-04-01",
+      "outcome_notes": "Particle count reduced; edge notch defects not seen in 200-panel run"
+    },
+    {
+      "case_id": "PCB-CASE-0168",
+      "defect_class": "pin-hole",
+      "component_type": "power plane \u2014 motor driver pour",
+      "root_cause": "Void in electroless copper seed layer created pinhole that propagated through plate",
+      "corrective_action": "Replenished electroless chemistry and reduced bath contamination via filtration",
+      "severity": 3,
+      "date_recorded": "2021-08-21",
+      "outcome_notes": "Backlight inspection of planes showed full coverage on sample set"
+    },
+    {
+      "case_id": "PCB-CASE-0133",
+      "defect_class": "copper",
+      "component_type": "inner-layer prepreg window",
+      "root_cause": "Resin smear not fully removed before desmear left conductive path treated as spurious copper island",
+      "corrective_action": "Extended plasma desmear cycle and added permanganate desmear for high-aspect vias",
+      "severity": 3,
+      "date_recorded": "2024-09-21",
+      "outcome_notes": "Via chain resistance measurements within 5% of simulation"
+    },
+    {
+      "case_id": "PCB-CASE-0080",
+      "defect_class": "mousebite",
+      "component_type": "RF microstrip \u2014 shield trace",
+      "root_cause": "Etch factor mismatch on high-current density areas at panel center",
+      "corrective_action": "Rebalanced cathode/anode geometry and throttled current density",
+      "severity": 5,
+      "date_recorded": "2024-05-26",
+      "outcome_notes": "Impedance TDR sweep within spec on RF test coupons"
+    },
+    {
+      "case_id": "PCB-CASE-0025",
+      "defect_class": "open",
+      "component_type": "fine-pitch pad",
+      "root_cause": "Mechanical nick during depanelization severed trace at panel edge",
+      "corrective_action": "Switched to laser depanelization and added keep-out routing near break tabs",
+      "severity": 5,
+      "date_recorded": "2023-11-06",
+      "outcome_notes": "AOI false opens at panel edge dropped to zero over 500 boards"
+    },
+    {
+      "case_id": "PCB-CASE-0172",
+      "defect_class": "pin-hole",
+      "component_type": "blind via capture pad \u2014 GND stitch via field",
+      "root_cause": "Laser drill debris not fully removed before plating seeded pinhole at capture pad center",
+      "corrective_action": "Ultrasonic clean after laser drill and vacuum desmear before metallization",
+      "severity": 2,
+      "date_recorded": "2023-11-06",
+      "outcome_notes": "Cross-section of blind vias showed continuous barrel without voids"
+    },
+    {
+      "case_id": "PCB-CASE-0029",
+      "defect_class": "open",
+      "component_type": "signal trace (outer layer)",
+      "root_cause": "Under-etch during subtractive etching left thin copper neck that opened after thermal cycling",
+      "corrective_action": "Increased etch time monitoring; recalibrated spray pressure on etch line",
+      "severity": 4,
+      "date_recorded": "2023-09-23",
+      "outcome_notes": "Etch rate verified hourly for one week; no recurrence on same lot style"
+    },
+    {
+      "case_id": "PCB-CASE-0145",
+      "defect_class": "copper",
+      "component_type": "soldermask clearance",
+      "root_cause": "Pinhole in dry film photoresist allowed electroplated copper nodule in mask-free zone",
+      "corrective_action": "Vacuum lamination pressure increased and film expiry tracking enforced",
+      "severity": 3,
+      "date_recorded": "2021-08-31",
+      "outcome_notes": "Nodule count per panel dropped from 3 avg to 0.1 avg"
+    },
+    {
+      "case_id": "PCB-CASE-0093",
+      "defect_class": "spur",
+      "component_type": "test pad array",
+      "root_cause": "Partially developed resist island plated and etched into spur rather than clearing",
+      "corrective_action": "Developer temperature alarm limits tightened and agitation verified",
+      "severity": 2,
+      "date_recorded": "2023-03-30",
+      "outcome_notes": "Developer bath chemistry logged twice per shift"
+    },
+    {
+      "case_id": "PCB-CASE-0030",
+      "defect_class": "open",
+      "component_type": "BGA escape trace",
+      "root_cause": "Dry film photoresist lift-off during development exposed trace to over-etch",
+      "corrective_action": "Reduced developer concentration and added pre-develop adhesion bake",
+      "severity": 3,
+      "date_recorded": "2021-09-20",
+      "outcome_notes": "Micro-etch weight loss returned to nominal range"
+    },
+    {
+      "case_id": "PCB-CASE-0176",
+      "defect_class": "pin-hole",
+      "component_type": "thermal relief spoke",
+      "root_cause": "Insufficient cleaning after micro-etch left organic residue blocking plating at spoke junction",
+      "corrective_action": "Added alkaline cleaner stage and raised rinse conductivity setpoint",
+      "severity": 3,
+      "date_recorded": "2023-02-20",
+      "outcome_notes": "Peel strength test on spokes passed IPC criteria"
+    },
+    {
+      "case_id": "PCB-CASE-0064",
+      "defect_class": "mousebite",
+      "component_type": "RF microstrip",
+      "root_cause": "Etch factor mismatch on high-current density areas at panel center",
+      "corrective_action": "Rebalanced cathode/anode geometry and throttled current density",
+      "severity": 5,
+      "date_recorded": "2022-05-30",
+      "outcome_notes": "Impedance TDR sweep within spec on RF test coupons"
+    },
+    {
+      "case_id": "PCB-CASE-0078",
+      "defect_class": "mousebite",
+      "component_type": "connector finger",
+      "root_cause": "Brush plating contact mark combined with etch left edge irregularity mimicking mouse bite",
+      "corrective_action": "Relocated bus bar contact points away from critical edge geometry",
+      "severity": 2,
+      "date_recorded": "2021-02-26",
+      "outcome_notes": "Gold finger thickness uniform; edge AOI clean"
+    },
+    {
+      "case_id": "PCB-CASE-0007",
+      "defect_class": "open",
+      "component_type": "fine-pitch pad",
+      "root_cause": "Mechanical nick during depanelization severed trace at panel edge",
+      "corrective_action": "Switched to laser depanelization and added keep-out routing near break tabs",
+      "severity": 4,
+      "date_recorded": "2021-03-30",
+      "outcome_notes": "AOI false opens at panel edge dropped to zero over 500 boards"
+    },
+    {
+      "case_id": "PCB-CASE-0088",
+      "defect_class": "mousebite",
+      "component_type": "RF microstrip \u2014 shield trace",
+      "root_cause": "Etch factor mismatch on high-current density areas at panel center",
+      "corrective_action": "Rebalanced cathode/anode geometry and throttled current density",
+      "severity": 3,
+      "date_recorded": "2023-06-24",
+      "outcome_notes": "Impedance TDR sweep within spec on RF test coupons"
+    },
+    {
+      "case_id": "PCB-CASE-0073",
+      "defect_class": "mousebite",
+      "component_type": "RF microstrip",
+      "root_cause": "Etch factor mismatch on high-current density areas at panel center",
+      "corrective_action": "Rebalanced cathode/anode geometry and throttled current density",
+      "severity": 4,
+      "date_recorded": "2024-10-03",
+      "outcome_notes": "Impedance TDR sweep within spec on RF test coupons"
+    },
+    {
+      "case_id": "PCB-CASE-0002",
+      "defect_class": "open",
+      "component_type": "signal trace (outer layer) \u2014 clock line",
+      "root_cause": "Under-etch during subtractive etching left thin copper neck that opened after thermal cycling",
+      "corrective_action": "Increased etch time monitoring; recalibrated spray pressure on etch line",
+      "severity": 3,
+      "date_recorded": "2024-04-24",
+      "outcome_notes": "Etch rate verified hourly for one week; no recurrence on same lot style"
+    },
+    {
+      "case_id": "PCB-CASE-0036",
+      "defect_class": "short",
+      "component_type": "adjacent SMT pads \u2014 decoupling cap pads",
+      "root_cause": "Over-etching combined with solder mask misalignment left insufficient mask dam between pads",
+      "corrective_action": "Recalibrated LDI exposure dose and tightened solder mask develop time",
+      "severity": 1,
+      "date_recorded": "2022-11-08",
+      "outcome_notes": "Electrical test shorts between 0.4 mm pitch pads eliminated on validation lot"
+    },
+    {
+      "case_id": "PCB-CASE-0051",
+      "defect_class": "short",
+      "component_type": "via-in-pad \u2014 QFN ground pad",
+      "root_cause": "Insufficient solder mask tenting over via allowed paste wicking and bridge to adjacent pad",
+      "corrective_action": "Filled vias with epoxy fill and planarized before mask application",
+      "severity": 5,
+      "date_recorded": "2021-04-27",
+      "outcome_notes": "X-ray inspection confirmed no wicking on filled vias"
+    },
+    {
+      "case_id": "PCB-CASE-0178",
+      "defect_class": "pin-hole",
+      "component_type": "thermal relief spoke",
+      "root_cause": "Insufficient cleaning after micro-etch left organic residue blocking plating at spoke junction",
+      "corrective_action": "Added alkaline cleaner stage and raised rinse conductivity setpoint",
+      "severity": 1,
+      "date_recorded": "2023-06-21",
+      "outcome_notes": "Peel strength test on spokes passed IPC criteria"
+    },
+    {
+      "case_id": "PCB-CASE-0131",
+      "defect_class": "copper",
+      "component_type": "impedance control stripe",
+      "root_cause": "Acid trap in CAD geometry caused localized plating buildup appearing as spurious copper",
+      "corrective_action": "CAM team revised acid trap angles and added teardrops on acute corners",
+      "severity": 4,
+      "date_recorded": "2024-02-12",
+      "outcome_notes": "Impedance coupons matched target within 2 ohms"
+    },
+    {
+      "case_id": "PCB-CASE-0104",
+      "defect_class": "spur",
+      "component_type": "test pad array",
+      "root_cause": "Partially developed resist island plated and etched into spur rather than clearing",
+      "corrective_action": "Developer temperature alarm limits tightened and agitation verified",
+      "severity": 4,
+      "date_recorded": "2022-02-28",
+      "outcome_notes": "Developer bath chemistry logged twice per shift"
+    },
+    {
+      "case_id": "PCB-CASE-0090",
+      "defect_class": "mousebite",
+      "component_type": "RF microstrip \u2014 DDR address line",
+      "root_cause": "Etch factor mismatch on high-current density areas at panel center",
+      "corrective_action": "Rebalanced cathode/anode geometry and throttled current density",
+      "severity": 3,
+      "date_recorded": "2022-04-27",
+      "outcome_notes": "Impedance TDR sweep within spec on RF test coupons"
+    },
+    {
+      "case_id": "PCB-CASE-0148",
+      "defect_class": "copper",
+      "component_type": "soldermask clearance",
+      "root_cause": "Pinhole in dry film photoresist allowed electroplated copper nodule in mask-free zone",
+      "corrective_action": "Vacuum lamination pressure increased and film expiry tracking enforced",
+      "severity": 2,
+      "date_recorded": "2024-07-05",
+      "outcome_notes": "Nodule count per panel dropped from 3 avg to 0.1 avg"
+    },
+    {
+      "case_id": "PCB-CASE-0107",
+      "defect_class": "spur",
+      "component_type": "high-density routing channel",
+      "root_cause": "Broken trace fragment from prior panel handling adhered and was laminated as foreign copper",
+      "corrective_action": "Enhanced pre-lamination panel wipe and ionizer bars at layup",
+      "severity": 2,
+      "date_recorded": "2022-03-26",
+      "outcome_notes": "Foreign material FOD checks added to layup checklist"
+    },
+    {
+      "case_id": "PCB-CASE-0046",
+      "defect_class": "short",
+      "component_type": "power plane clearance",
+      "root_cause": "Conductive ionic contamination from inadequate DI rinse created dendritic short under humidity",
+      "corrective_action": "Extended final rinse cycles and installed in-line resistivity monitoring above 10 M\u03a9\u00b7cm",
+      "severity": 3,
+      "date_recorded": "2023-09-22",
+      "outcome_notes": "HAST chamber retest passed after rinse SOP update"
+    },
+    {
+      "case_id": "PCB-CASE-0129",
+      "defect_class": "copper",
+      "component_type": "inner-layer prepreg window",
+      "root_cause": "Resin smear not fully removed before desmear left conductive path treated as spurious copper island",
+      "corrective_action": "Extended plasma desmear cycle and added permanganate desmear for high-aspect vias",
+      "severity": 2,
+      "date_recorded": "2022-06-14",
+      "outcome_notes": "Via chain resistance measurements within 5% of simulation"
+    },
+    {
+      "case_id": "PCB-CASE-0049",
+      "defect_class": "short",
+      "component_type": "via-in-pad \u2014 battery sense lines",
+      "root_cause": "Insufficient solder mask tenting over via allowed paste wicking and bridge to adjacent pad",
+      "corrective_action": "Filled vias with epoxy fill and planarized before mask application",
+      "severity": 2,
+      "date_recorded": "2021-11-14",
+      "outcome_notes": "X-ray inspection confirmed no wicking on filled vias"
+    },
+    {
+      "case_id": "PCB-CASE-0031",
+      "defect_class": "short",
+      "component_type": "power plane clearance",
+      "root_cause": "Conductive ionic contamination from inadequate DI rinse created dendritic short under humidity",
+      "corrective_action": "Extended final rinse cycles and installed in-line resistivity monitoring above 10 M\u03a9\u00b7cm",
+      "severity": 4,
+      "date_recorded": "2023-12-17",
+      "outcome_notes": "HAST chamber retest passed after rinse SOP update"
+    },
+    {
+      "case_id": "PCB-CASE-0014",
+      "defect_class": "open",
+      "component_type": "BGA escape trace",
+      "root_cause": "Dry film photoresist lift-off during development exposed trace to over-etch",
+      "corrective_action": "Reduced developer concentration and added pre-develop adhesion bake",
+      "severity": 4,
+      "date_recorded": "2022-10-27",
+      "outcome_notes": "Micro-etch weight loss returned to nominal range"
+    },
+    {
+      "case_id": "PCB-CASE-0171",
+      "defect_class": "pin-hole",
+      "component_type": "large copper pour",
+      "root_cause": "Entrapped air during panel entry into plating bath caused non-coating bubble defect",
+      "corrective_action": "Reduced entry angle and added cathode rod oscillation in plating tank",
+      "severity": 2,
+      "date_recorded": "2021-05-23",
+      "outcome_notes": "Plating thickness CV improved from 12% to 6%"
+    },
+    {
+      "case_id": "PCB-CASE-0110",
+      "defect_class": "spur",
+      "component_type": "test pad array \u2014 keep-out zone",
+      "root_cause": "Partially developed resist island plated and etched into spur rather than clearing",
+      "corrective_action": "Developer temperature alarm limits tightened and agitation verified",
+      "severity": 3,
+      "date_recorded": "2021-06-21",
+      "outcome_notes": "Developer bath chemistry logged twice per shift"
+    },
+    {
+      "case_id": "PCB-CASE-0050",
+      "defect_class": "short",
+      "component_type": "adjacent SMT pads",
+      "root_cause": "Over-etching combined with solder mask misalignment left insufficient mask dam between pads",
+      "corrective_action": "Recalibrated LDI exposure dose and tightened solder mask develop time",
+      "severity": 1,
+      "date_recorded": "2022-10-05",
+      "outcome_notes": "Electrical test shorts between 0.4 mm pitch pads eliminated on validation lot"
+    },
+    {
+      "case_id": "PCB-CASE-0160",
+      "defect_class": "pin-hole",
+      "component_type": "blind via capture pad",
+      "root_cause": "Laser drill debris not fully removed before plating seeded pinhole at capture pad center",
+      "corrective_action": "Ultrasonic clean after laser drill and vacuum desmear before metallization",
+      "severity": 2,
+      "date_recorded": "2023-04-17",
+      "outcome_notes": "Cross-section of blind vias showed continuous barrel without voids"
+    },
+    {
+      "case_id": "PCB-CASE-0122",
+      "defect_class": "copper",
+      "component_type": "soldermask clearance",
+      "root_cause": "Pinhole in dry film photoresist allowed electroplated copper nodule in mask-free zone",
+      "corrective_action": "Vacuum lamination pressure increased and film expiry tracking enforced",
+      "severity": 4,
+      "date_recorded": "2021-01-26",
+      "outcome_notes": "Nodule count per panel dropped from 3 avg to 0.1 avg"
+    },
+    {
+      "case_id": "PCB-CASE-0109",
+      "defect_class": "spur",
+      "component_type": "high-density routing channel",
+      "root_cause": "Broken trace fragment from prior panel handling adhered and was laminated as foreign copper",
+      "corrective_action": "Enhanced pre-lamination panel wipe and ionizer bars at layup",
+      "severity": 5,
+      "date_recorded": "2021-09-19",
+      "outcome_notes": "Foreign material FOD checks added to layup checklist"
+    },
+    {
+      "case_id": "PCB-CASE-0164",
+      "defect_class": "pin-hole",
+      "component_type": "blind via capture pad",
+      "root_cause": "Laser drill debris not fully removed before plating seeded pinhole at capture pad center",
+      "corrective_action": "Ultrasonic clean after laser drill and vacuum desmear before metallization",
+      "severity": 2,
+      "date_recorded": "2021-04-22",
+      "outcome_notes": "Cross-section of blind vias showed continuous barrel without voids"
+    },
+    {
+      "case_id": "PCB-CASE-0033",
+      "defect_class": "short",
+      "component_type": "fine trace pair \u2014 battery sense lines",
+      "root_cause": "Solder bridge from excess paste deposit due to worn stencil aperture corners",
+      "corrective_action": "Stencil inspection every 500 prints and aperture corner re-cut",
+      "severity": 3,
+      "date_recorded": "2023-11-26",
+      "outcome_notes": "SPI volume readings stabilized within \u00b18% of nominal"
+    },
+    {
+      "case_id": "PCB-CASE-0089",
+      "defect_class": "mousebite",
+      "component_type": "connector finger",
+      "root_cause": "Brush plating contact mark combined with etch left edge irregularity mimicking mouse bite",
+      "corrective_action": "Relocated bus bar contact points away from critical edge geometry",
+      "severity": 1,
+      "date_recorded": "2024-09-11",
+      "outcome_notes": "Gold finger thickness uniform; edge AOI clean"
+    },
+    {
+      "case_id": "PCB-CASE-0055",
+      "defect_class": "short",
+      "component_type": "fine trace pair \u2014 LVDS pair",
+      "root_cause": "Solder bridge from excess paste deposit due to worn stencil aperture corners",
+      "corrective_action": "Stencil inspection every 500 prints and aperture corner re-cut",
+      "severity": 3,
+      "date_recorded": "2022-02-23",
+      "outcome_notes": "SPI volume readings stabilized within \u00b18% of nominal"
+    },
+    {
+      "case_id": "PCB-CASE-0174",
+      "defect_class": "pin-hole",
+      "component_type": "thermal relief spoke",
+      "root_cause": "Insufficient cleaning after micro-etch left organic residue blocking plating at spoke junction",
+      "corrective_action": "Added alkaline cleaner stage and raised rinse conductivity setpoint",
+      "severity": 5,
+      "date_recorded": "2023-07-22",
+      "outcome_notes": "Peel strength test on spokes passed IPC criteria"
+    },
+    {
+      "case_id": "PCB-CASE-0039",
+      "defect_class": "short",
+      "component_type": "power plane clearance",
+      "root_cause": "Conductive ionic contamination from inadequate DI rinse created dendritic short under humidity",
+      "corrective_action": "Extended final rinse cycles and installed in-line resistivity monitoring above 10 M\u03a9\u00b7cm",
+      "severity": 3,
+      "date_recorded": "2021-07-18",
+      "outcome_notes": "HAST chamber retest passed after rinse SOP update"
+    },
+    {
+      "case_id": "PCB-CASE-0152",
+      "defect_class": "pin-hole",
+      "component_type": "thermal relief spoke \u2014 motor driver pour",
+      "root_cause": "Insufficient cleaning after micro-etch left organic residue blocking plating at spoke junction",
+      "corrective_action": "Added alkaline cleaner stage and raised rinse conductivity setpoint",
+      "severity": 2,
+      "date_recorded": "2023-05-21",
+      "outcome_notes": "Peel strength test on spokes passed IPC criteria"
+    },
+    {
+      "case_id": "PCB-CASE-0142",
+      "defect_class": "copper",
+      "component_type": "panel tooling hole vicinity",
+      "root_cause": "Copper foil burr from routing bit deposited and pressed into laminate during layup",
+      "corrective_action": "Routing bit change interval halved and post-route compressed air blow-off added",
+      "severity": 2,
+      "date_recorded": "2021-04-16",
+      "outcome_notes": "Tooling zone AOI clean on 100 consecutive panels"
+    },
+    {
+      "case_id": "PCB-CASE-0121",
+      "defect_class": "copper",
+      "component_type": "soldermask clearance",
+      "root_cause": "Pinhole in dry film photoresist allowed electroplated copper nodule in mask-free zone",
+      "corrective_action": "Vacuum lamination pressure increased and film expiry tracking enforced",
+      "severity": 3,
+      "date_recorded": "2022-12-13",
+      "outcome_notes": "Nodule count per panel dropped from 3 avg to 0.1 avg"
+    },
+    {
+      "case_id": "PCB-CASE-0057",
+      "defect_class": "short",
+      "component_type": "fine trace pair",
+      "root_cause": "Solder bridge from excess paste deposit due to worn stencil aperture corners",
+      "corrective_action": "Stencil inspection every 500 prints and aperture corner re-cut",
+      "severity": 3,
+      "date_recorded": "2021-01-20",
+      "outcome_notes": "SPI volume readings stabilized within \u00b18% of nominal"
+    },
+    {
+      "case_id": "PCB-CASE-0170",
+      "defect_class": "pin-hole",
+      "component_type": "blind via capture pad \u2014 heat spreader plane",
+      "root_cause": "Laser drill debris not fully removed before plating seeded pinhole at capture pad center",
+      "corrective_action": "Ultrasonic clean after laser drill and vacuum desmear before metallization",
+      "severity": 3,
+      "date_recorded": "2022-05-15",
+      "outcome_notes": "Cross-section of blind vias showed continuous barrel without voids"
+    },
+    {
+      "case_id": "PCB-CASE-0041",
+      "defect_class": "short",
+      "component_type": "adjacent SMT pads",
+      "root_cause": "Over-etching combined with solder mask misalignment left insufficient mask dam between pads",
+      "corrective_action": "Recalibrated LDI exposure dose and tightened solder mask develop time",
+      "severity": 4,
+      "date_recorded": "2023-04-05",
+      "outcome_notes": "Electrical test shorts between 0.4 mm pitch pads eliminated on validation lot"
+    },
+    {
+      "case_id": "PCB-CASE-0165",
+      "defect_class": "pin-hole",
+      "component_type": "blind via capture pad",
+      "root_cause": "Laser drill debris not fully removed before plating seeded pinhole at capture pad center",
+      "corrective_action": "Ultrasonic clean after laser drill and vacuum desmear before metallization",
+      "severity": 2,
+      "date_recorded": "2021-04-16",
+      "outcome_notes": "Cross-section of blind vias showed continuous barrel without voids"
+    },
+    {
+      "case_id": "PCB-CASE-0120",
+      "defect_class": "spur",
+      "component_type": "high-density routing channel",
+      "root_cause": "Broken trace fragment from prior panel handling adhered and was laminated as foreign copper",
+      "corrective_action": "Enhanced pre-lamination panel wipe and ionizer bars at layup",
+      "severity": 4,
+      "date_recorded": "2022-09-10",
+      "outcome_notes": "Foreign material FOD checks added to layup checklist"
+    },
+    {
+      "case_id": "PCB-CASE-0003",
+      "defect_class": "open",
+      "component_type": "PTH via barrel",
+      "root_cause": "Incomplete copper plating in via barrel due to air bubble entrapment during electroplating",
+      "corrective_action": "Enabled pulse plating and reduced panel rack density in plating tank",
+      "severity": 3,
+      "date_recorded": "2023-11-01",
+      "outcome_notes": "Cross-section microscopy on next 20 panels showed full barrel coverage"
+    },
+    {
+      "case_id": "PCB-CASE-0134",
+      "defect_class": "copper",
+      "component_type": "panel tooling hole vicinity",
+      "root_cause": "Copper foil burr from routing bit deposited and pressed into laminate during layup",
+      "corrective_action": "Routing bit change interval halved and post-route compressed air blow-off added",
+      "severity": 2,
+      "date_recorded": "2024-02-02",
+      "outcome_notes": "Tooling zone AOI clean on 100 consecutive panels"
+    },
+    {
+      "case_id": "PCB-CASE-0118",
+      "defect_class": "spur",
+      "component_type": "ground isolation gap \u2014 antenna feed gap",
+      "root_cause": "Incomplete etching due to photoresist scumming left isolated copper spur in clearance zone",
+      "corrective_action": "Added post-develop descum plasma step before etch",
+      "severity": 2,
+      "date_recorded": "2022-09-30",
+      "outcome_notes": "Optical inspection of clearance gaps clear on audit panels"
+    },
+    {
+      "case_id": "PCB-CASE-0066",
+      "defect_class": "mousebite",
+      "component_type": "differential pair",
+      "root_cause": "Photoresist edge damage from particulate on exposure vacuum frame created notch defects",
+      "corrective_action": "Added frame cleaning between panels and HEPA upgrade on clean room",
+      "severity": 4,
+      "date_recorded": "2021-11-27",
+      "outcome_notes": "Particle count reduced; edge notch defects not seen in 200-panel run"
+    },
+    {
+      "case_id": "PCB-CASE-0119",
+      "defect_class": "spur",
+      "component_type": "soldermask-defined pad edge \u2014 fiducial vicinity",
+      "root_cause": "Misaligned second-side artwork left copper spur extending into mask opening",
+      "corrective_action": "Dual-sided alignment pins verified; LDI scaling compensation updated",
+      "severity": 5,
+      "date_recorded": "2023-03-24",
+      "outcome_notes": "Registration offset reduced below 25 \u00b5m on double-sided lot"
+    },
+    {
+      "case_id": "PCB-CASE-0060",
+      "defect_class": "short",
+      "component_type": "via-in-pad",
+      "root_cause": "Insufficient solder mask tenting over via allowed paste wicking and bridge to adjacent pad",
+      "corrective_action": "Filled vias with epoxy fill and planarized before mask application",
+      "severity": 5,
+      "date_recorded": "2024-06-06",
+      "outcome_notes": "X-ray inspection confirmed no wicking on filled vias"
+    },
+    {
+      "case_id": "PCB-CASE-0037",
+      "defect_class": "short",
+      "component_type": "ground pour region",
+      "root_cause": "Copper sliver left between pour and signal trace after CAM cleanup gap",
+      "corrective_action": "Updated CAM DRC to enforce minimum sliver removal width of 0.15 mm",
+      "severity": 2,
+      "date_recorded": "2024-01-10",
+      "outcome_notes": "CAM review checklist added; no slivers on next 30 designs"
+    },
+    {
+      "case_id": "PCB-CASE-0128",
+      "defect_class": "copper",
+      "component_type": "panel tooling hole vicinity \u2014 RF ground ring",
+      "root_cause": "Copper foil burr from routing bit deposited and pressed into laminate during layup",
+      "corrective_action": "Routing bit change interval halved and post-route compressed air blow-off added",
+      "severity": 4,
+      "date_recorded": "2023-10-10",
+      "outcome_notes": "Tooling zone AOI clean on 100 consecutive panels"
+    },
+    {
+      "case_id": "PCB-CASE-0062",
+      "defect_class": "mousebite",
+      "component_type": "RF microstrip \u2014 DDR address line",
+      "root_cause": "Etch factor mismatch on high-current density areas at panel center",
+      "corrective_action": "Rebalanced cathode/anode geometry and throttled current density",
+      "severity": 4,
+      "date_recorded": "2021-08-08",
+      "outcome_notes": "Impedance TDR sweep within spec on RF test coupons"
+    },
+    {
+      "case_id": "PCB-CASE-0175",
+      "defect_class": "pin-hole",
+      "component_type": "large copper pour",
+      "root_cause": "Entrapped air during panel entry into plating bath caused non-coating bubble defect",
+      "corrective_action": "Reduced entry angle and added cathode rod oscillation in plating tank",
+      "severity": 4,
+      "date_recorded": "2022-04-24",
+      "outcome_notes": "Plating thickness CV improved from 12% to 6%"
+    },
+    {
+      "case_id": "PCB-CASE-0179",
+      "defect_class": "pin-hole",
+      "component_type": "power plane",
+      "root_cause": "Void in electroless copper seed layer created pinhole that propagated through plate",
+      "corrective_action": "Replenished electroless chemistry and reduced bath contamination via filtration",
+      "severity": 4,
+      "date_recorded": "2023-04-20",
+      "outcome_notes": "Backlight inspection of planes showed full coverage on sample set"
+    },
+    {
+      "case_id": "PCB-CASE-0045",
+      "defect_class": "short",
+      "component_type": "via-in-pad",
+      "root_cause": "Insufficient solder mask tenting over via allowed paste wicking and bridge to adjacent pad",
+      "corrective_action": "Filled vias with epoxy fill and planarized before mask application",
+      "severity": 5,
+      "date_recorded": "2021-07-11",
+      "outcome_notes": "X-ray inspection confirmed no wicking on filled vias"
+    },
+    {
+      "case_id": "PCB-CASE-0044",
+      "defect_class": "short",
+      "component_type": "adjacent SMT pads",
+      "root_cause": "Over-etching combined with solder mask misalignment left insufficient mask dam between pads",
+      "corrective_action": "Recalibrated LDI exposure dose and tightened solder mask develop time",
+      "severity": 1,
+      "date_recorded": "2024-02-02",
+      "outcome_notes": "Electrical test shorts between 0.4 mm pitch pads eliminated on validation lot"
+    },
+    {
+      "case_id": "PCB-CASE-0047",
+      "defect_class": "short",
+      "component_type": "adjacent SMT pads",
+      "root_cause": "Over-etching combined with solder mask misalignment left insufficient mask dam between pads",
+      "corrective_action": "Recalibrated LDI exposure dose and tightened solder mask develop time",
+      "severity": 1,
+      "date_recorded": "2023-02-16",
+      "outcome_notes": "Electrical test shorts between 0.4 mm pitch pads eliminated on validation lot"
+    },
+    {
+      "case_id": "PCB-CASE-0106",
+      "defect_class": "spur",
+      "component_type": "test pad array",
+      "root_cause": "Partially developed resist island plated and etched into spur rather than clearing",
+      "corrective_action": "Developer temperature alarm limits tightened and agitation verified",
+      "severity": 4,
+      "date_recorded": "2024-01-08",
+      "outcome_notes": "Developer bath chemistry logged twice per shift"
+    },
+    {
+      "case_id": "PCB-CASE-0136",
+      "defect_class": "copper",
+      "component_type": "panel tooling hole vicinity",
+      "root_cause": "Copper foil burr from routing bit deposited and pressed into laminate during layup",
+      "corrective_action": "Routing bit change interval halved and post-route compressed air blow-off added",
+      "severity": 5,
+      "date_recorded": "2024-01-03",
+      "outcome_notes": "Tooling zone AOI clean on 100 consecutive panels"
+    },
+    {
+      "case_id": "PCB-CASE-0063",
+      "defect_class": "mousebite",
+      "component_type": "RF microstrip",
+      "root_cause": "Etch factor mismatch on high-current density areas at panel center",
+      "corrective_action": "Rebalanced cathode/anode geometry and throttled current density",
+      "severity": 2,
+      "date_recorded": "2022-12-04",
+      "outcome_notes": "Impedance TDR sweep within spec on RF test coupons"
+    },
+    {
+      "case_id": "PCB-CASE-0038",
+      "defect_class": "short",
+      "component_type": "via-in-pad",
+      "root_cause": "Insufficient solder mask tenting over via allowed paste wicking and bridge to adjacent pad",
+      "corrective_action": "Filled vias with epoxy fill and planarized before mask application",
+      "severity": 4,
+      "date_recorded": "2022-05-13",
+      "outcome_notes": "X-ray inspection confirmed no wicking on filled vias"
+    },
+    {
+      "case_id": "PCB-CASE-0111",
+      "defect_class": "spur",
+      "component_type": "test pad array \u2014 antenna feed gap",
+      "root_cause": "Partially developed resist island plated and etched into spur rather than clearing",
+      "corrective_action": "Developer temperature alarm limits tightened and agitation verified",
+      "severity": 2,
+      "date_recorded": "2021-04-13",
+      "outcome_notes": "Developer bath chemistry logged twice per shift"
+    },
+    {
+      "case_id": "PCB-CASE-0096",
+      "defect_class": "spur",
+      "component_type": "test pad array",
+      "root_cause": "Partially developed resist island plated and etched into spur rather than clearing",
+      "corrective_action": "Developer temperature alarm limits tightened and agitation verified",
+      "severity": 3,
+      "date_recorded": "2023-08-10",
+      "outcome_notes": "Developer bath chemistry logged twice per shift"
+    },
+    {
+      "case_id": "PCB-CASE-0092",
+      "defect_class": "spur",
+      "component_type": "ground isolation gap",
+      "root_cause": "Incomplete etching due to photoresist scumming left isolated copper spur in clearance zone",
+      "corrective_action": "Added post-develop descum plasma step before etch",
+      "severity": 4,
+      "date_recorded": "2023-04-29",
+      "outcome_notes": "Optical inspection of clearance gaps clear on audit panels"
+    },
+    {
+      "case_id": "PCB-CASE-0076",
+      "defect_class": "mousebite",
+      "component_type": "RF microstrip \u2014 analog input trace",
+      "root_cause": "Etch factor mismatch on high-current density areas at panel center",
+      "corrective_action": "Rebalanced cathode/anode geometry and throttled current density",
+      "severity": 1,
+      "date_recorded": "2022-04-02",
+      "outcome_notes": "Impedance TDR sweep within spec on RF test coupons"
+    },
+    {
+      "case_id": "PCB-CASE-0015",
+      "defect_class": "open",
+      "component_type": "PTH via barrel \u2014 clock line",
+      "root_cause": "Incomplete copper plating in via barrel due to air bubble entrapment during electroplating",
+      "corrective_action": "Enabled pulse plating and reduced panel rack density in plating tank",
+      "severity": 3,
+      "date_recorded": "2022-10-09",
+      "outcome_notes": "Cross-section microscopy on next 20 panels showed full barrel coverage"
+    },
+    {
+      "case_id": "PCB-CASE-0084",
+      "defect_class": "mousebite",
+      "component_type": "RF microstrip",
+      "root_cause": "Etch factor mismatch on high-current density areas at panel center",
+      "corrective_action": "Rebalanced cathode/anode geometry and throttled current density",
+      "severity": 3,
+      "date_recorded": "2024-09-27",
+      "outcome_notes": "Impedance TDR sweep within spec on RF test coupons"
+    },
+    {
+      "case_id": "PCB-CASE-0012",
+      "defect_class": "open",
+      "component_type": "fine-pitch pad",
+      "root_cause": "Mechanical nick during depanelization severed trace at panel edge",
+      "corrective_action": "Switched to laser depanelization and added keep-out routing near break tabs",
+      "severity": 3,
+      "date_recorded": "2024-06-01",
+      "outcome_notes": "AOI false opens at panel edge dropped to zero over 500 boards"
+    },
+    {
+      "case_id": "PCB-CASE-0008",
+      "defect_class": "open",
+      "component_type": "inner-layer trace",
+      "root_cause": "Misregistration during lamination caused drill hit to miss pad center, removing connection",
+      "corrective_action": "Tightened lamination press temperature profile and X-ray drill alignment check",
+      "severity": 2,
+      "date_recorded": "2024-02-05",
+      "outcome_notes": "Registration drift held within 50 \u00b5m on subsequent inner layers"
+    },
+    {
+      "case_id": "PCB-CASE-0077",
+      "defect_class": "mousebite",
+      "component_type": "RF microstrip \u2014 I2C bus",
+      "root_cause": "Etch factor mismatch on high-current density areas at panel center",
+      "corrective_action": "Rebalanced cathode/anode geometry and throttled current density",
+      "severity": 5,
+      "date_recorded": "2021-05-23",
+      "outcome_notes": "Impedance TDR sweep within spec on RF test coupons"
+    },
+    {
+      "case_id": "PCB-CASE-0043",
+      "defect_class": "short",
+      "component_type": "ground pour region",
+      "root_cause": "Copper sliver left between pour and signal trace after CAM cleanup gap",
+      "corrective_action": "Updated CAM DRC to enforce minimum sliver removal width of 0.15 mm",
+      "severity": 3,
+      "date_recorded": "2022-07-25",
+      "outcome_notes": "CAM review checklist added; no slivers on next 30 designs"
+    },
+    {
+      "case_id": "PCB-CASE-0114",
+      "defect_class": "spur",
+      "component_type": "ground isolation gap",
+      "root_cause": "Incomplete etching due to photoresist scumming left isolated copper spur in clearance zone",
+      "corrective_action": "Added post-develop descum plasma step before etch",
+      "severity": 3,
+      "date_recorded": "2022-04-05",
+      "outcome_notes": "Optical inspection of clearance gaps clear on audit panels"
+    },
+    {
+      "case_id": "PCB-CASE-0177",
+      "defect_class": "pin-hole",
+      "component_type": "large copper pour",
+      "root_cause": "Entrapped air during panel entry into plating bath caused non-coating bubble defect",
+      "corrective_action": "Reduced entry angle and added cathode rod oscillation in plating tank",
+      "severity": 2,
+      "date_recorded": "2021-03-17",
+      "outcome_notes": "Plating thickness CV improved from 12% to 6%"
+    },
+    {
+      "case_id": "PCB-CASE-0026",
+      "defect_class": "open",
+      "component_type": "fine-pitch pad \u2014 USB differential pair",
+      "root_cause": "Mechanical nick during depanelization severed trace at panel edge",
+      "corrective_action": "Switched to laser depanelization and added keep-out routing near break tabs",
+      "severity": 3,
+      "date_recorded": "2021-11-10",
+      "outcome_notes": "AOI false opens at panel edge dropped to zero over 500 boards"
+    },
+    {
+      "case_id": "PCB-CASE-0112",
+      "defect_class": "spur",
+      "component_type": "test pad array",
+      "root_cause": "Partially developed resist island plated and etched into spur rather than clearing",
+      "corrective_action": "Developer temperature alarm limits tightened and agitation verified",
+      "severity": 4,
+      "date_recorded": "2022-11-23",
+      "outcome_notes": "Developer bath chemistry logged twice per shift"
+    },
+    {
+      "case_id": "PCB-CASE-0024",
+      "defect_class": "open",
+      "component_type": "PTH via barrel",
+      "root_cause": "Incomplete copper plating in via barrel due to air bubble entrapment during electroplating",
+      "corrective_action": "Enabled pulse plating and reduced panel rack density in plating tank",
+      "severity": 5,
+      "date_recorded": "2021-01-07",
+      "outcome_notes": "Cross-section microscopy on next 20 panels showed full barrel coverage"
+    },
+    {
+      "case_id": "PCB-CASE-0059",
+      "defect_class": "short",
+      "component_type": "fine trace pair \u2014 decoupling cap pads",
+      "root_cause": "Solder bridge from excess paste deposit due to worn stencil aperture corners",
+      "corrective_action": "Stencil inspection every 500 prints and aperture corner re-cut",
+      "severity": 3,
+      "date_recorded": "2022-05-16",
+      "outcome_notes": "SPI volume readings stabilized within \u00b18% of nominal"
+    },
+    {
+      "case_id": "PCB-CASE-0074",
+      "defect_class": "mousebite",
+      "component_type": "RF microstrip \u2014 analog input trace",
+      "root_cause": "Etch factor mismatch on high-current density areas at panel center",
+      "corrective_action": "Rebalanced cathode/anode geometry and throttled current density",
+      "severity": 3,
+      "date_recorded": "2021-08-10",
+      "outcome_notes": "Impedance TDR sweep within spec on RF test coupons"
+    },
+    {
+      "case_id": "PCB-CASE-0162",
+      "defect_class": "pin-hole",
+      "component_type": "blind via capture pad \u2014 backplane connector plane",
+      "root_cause": "Laser drill debris not fully removed before plating seeded pinhole at capture pad center",
+      "corrective_action": "Ultrasonic clean after laser drill and vacuum desmear before metallization",
+      "severity": 1,
+      "date_recorded": "2023-07-21",
+      "outcome_notes": "Cross-section of blind vias showed continuous barrel without voids"
+    },
+    {
+      "case_id": "PCB-CASE-0061",
+      "defect_class": "mousebite",
+      "component_type": "outer-layer trace edge",
+      "root_cause": "Aggressive etching with oscillating pH caused lateral undercut (mouse bite) on trace sidewalls",
+      "corrective_action": "Stabilized etchant ORP and switched to controlled spray nozzle pattern",
+      "severity": 2,
+      "date_recorded": "2024-09-20",
+      "outcome_notes": "Cross-sections showed uniform trace width within \u00b110% of design"
+    },
+    {
+      "case_id": "PCB-CASE-0018",
+      "defect_class": "open",
+      "component_type": "BGA escape trace",
+      "root_cause": "Dry film photoresist lift-off during development exposed trace to over-etch",
+      "corrective_action": "Reduced developer concentration and added pre-develop adhesion bake",
+      "severity": 3,
+      "date_recorded": "2024-04-12",
+      "outcome_notes": "Micro-etch weight loss returned to nominal range"
+    },
+    {
+      "case_id": "PCB-CASE-0159",
+      "defect_class": "pin-hole",
+      "component_type": "large copper pour",
+      "root_cause": "Entrapped air during panel entry into plating bath caused non-coating bubble defect",
+      "corrective_action": "Reduced entry angle and added cathode rod oscillation in plating tank",
+      "severity": 4,
+      "date_recorded": "2024-07-24",
+      "outcome_notes": "Plating thickness CV improved from 12% to 6%"
+    },
+    {
+      "case_id": "PCB-CASE-0010",
+      "defect_class": "open",
+      "component_type": "fine-pitch pad",
+      "root_cause": "Mechanical nick during depanelization severed trace at panel edge",
+      "corrective_action": "Switched to laser depanelization and added keep-out routing near break tabs",
+      "severity": 4,
+      "date_recorded": "2022-04-22",
+      "outcome_notes": "AOI false opens at panel edge dropped to zero over 500 boards"
+    },
+    {
+      "case_id": "PCB-CASE-0139",
+      "defect_class": "copper",
+      "component_type": "panel tooling hole vicinity \u2014 RF ground ring",
+      "root_cause": "Copper foil burr from routing bit deposited and pressed into laminate during layup",
+      "corrective_action": "Routing bit change interval halved and post-route compressed air blow-off added",
+      "severity": 2,
+      "date_recorded": "2023-12-30",
+      "outcome_notes": "Tooling zone AOI clean on 100 consecutive panels"
+    },
+    {
+      "case_id": "PCB-CASE-0125",
+      "defect_class": "copper",
+      "component_type": "panel tooling hole vicinity",
+      "root_cause": "Copper foil burr from routing bit deposited and pressed into laminate during layup",
+      "corrective_action": "Routing bit change interval halved and post-route compressed air blow-off added",
+      "severity": 3,
+      "date_recorded": "2023-08-11",
+      "outcome_notes": "Tooling zone AOI clean on 100 consecutive panels"
+    },
+    {
+      "case_id": "PCB-CASE-0161",
+      "defect_class": "pin-hole",
+      "component_type": "large copper pour \u2014 GND stitch via field",
+      "root_cause": "Entrapped air during panel entry into plating bath caused non-coating bubble defect",
+      "corrective_action": "Reduced entry angle and added cathode rod oscillation in plating tank",
+      "severity": 3,
+      "date_recorded": "2023-04-24",
+      "outcome_notes": "Plating thickness CV improved from 12% to 6%"
+    },
+    {
+      "case_id": "PCB-CASE-0082",
+      "defect_class": "mousebite",
+      "component_type": "differential pair",
+      "root_cause": "Photoresist edge damage from particulate on exposure vacuum frame created notch defects",
+      "corrective_action": "Added frame cleaning between panels and HEPA upgrade on clean room",
+      "severity": 1,
+      "date_recorded": "2023-06-03",
+      "outcome_notes": "Particle count reduced; edge notch defects not seen in 200-panel run"
+    },
+    {
+      "case_id": "PCB-CASE-0098",
+      "defect_class": "spur",
+      "component_type": "test pad array",
+      "root_cause": "Partially developed resist island plated and etched into spur rather than clearing",
+      "corrective_action": "Developer temperature alarm limits tightened and agitation verified",
+      "severity": 4,
+      "date_recorded": "2021-11-22",
+      "outcome_notes": "Developer bath chemistry logged twice per shift"
+    },
+    {
+      "case_id": "PCB-CASE-0137",
+      "defect_class": "copper",
+      "component_type": "inner-layer prepreg window",
+      "root_cause": "Resin smear not fully removed before desmear left conductive path treated as spurious copper island",
+      "corrective_action": "Extended plasma desmear cycle and added permanganate desmear for high-aspect vias",
+      "severity": 2,
+      "date_recorded": "2023-09-19",
+      "outcome_notes": "Via chain resistance measurements within 5% of simulation"
+    },
+    {
+      "case_id": "PCB-CASE-0173",
+      "defect_class": "pin-hole",
+      "component_type": "thermal relief spoke",
+      "root_cause": "Insufficient cleaning after micro-etch left organic residue blocking plating at spoke junction",
+      "corrective_action": "Added alkaline cleaner stage and raised rinse conductivity setpoint",
+      "severity": 3,
+      "date_recorded": "2021-11-01",
+      "outcome_notes": "Peel strength test on spokes passed IPC criteria"
+    },
+    {
+      "case_id": "PCB-CASE-0085",
+      "defect_class": "mousebite",
+      "component_type": "RF microstrip",
+      "root_cause": "Etch factor mismatch on high-current density areas at panel center",
+      "corrective_action": "Rebalanced cathode/anode geometry and throttled current density",
+      "severity": 3,
+      "date_recorded": "2022-01-28",
+      "outcome_notes": "Impedance TDR sweep within spec on RF test coupons"
+    },
+    {
+      "case_id": "PCB-CASE-0021",
+      "defect_class": "open",
+      "component_type": "inner-layer trace",
+      "root_cause": "Misregistration during lamination caused drill hit to miss pad center, removing connection",
+      "corrective_action": "Tightened lamination press temperature profile and X-ray drill alignment check",
+      "severity": 3,
+      "date_recorded": "2023-02-28",
+      "outcome_notes": "Registration drift held within 50 \u00b5m on subsequent inner layers"
+    },
+    {
+      "case_id": "PCB-CASE-0167",
+      "defect_class": "pin-hole",
+      "component_type": "large copper pour",
+      "root_cause": "Entrapped air during panel entry into plating bath caused non-coating bubble defect",
+      "corrective_action": "Reduced entry angle and added cathode rod oscillation in plating tank",
+      "severity": 3,
+      "date_recorded": "2022-09-29",
+      "outcome_notes": "Plating thickness CV improved from 12% to 6%"
+    }
+  ],
+  "version": "1.0",
+  "description": "Synthetic historical PCB defect cases for RAG ingestion"
+}
