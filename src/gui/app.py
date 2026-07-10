@@ -27,6 +27,14 @@ CONFIDENCE_COLORS = {
     "uncertain": "#e74c3c",
 }
 
+# Report severity band -> color, for the Phase 4 inspection report headline.
+SEVERITY_COLORS = {
+    "critical": "#e74c3c",
+    "major": "#e67e22",
+    "minor": "#f1c40f",
+    "observation": "#3498db",
+}
+
 st.set_page_config(page_title="PCB Defect Analyzer", layout="wide")
 
 
@@ -127,6 +135,71 @@ def _render_result_card(res: dict) -> None:
     st.divider()
 
 
+def _render_defect_report(dr: dict) -> None:
+    """Render one Phase 4 DefectReport: narrative, severity, grounded root cause, actions."""
+    sev = dr["severity"]
+    sev_color = SEVERITY_COLORS.get(sev["level"], "#3498db")
+    mode = dr["generated_by"]
+    mode_badge = "🤖 LLM" if mode == "llm" else "📋 fallback"
+
+    st.markdown(
+        f"#### {dr['defect_class']} — "
+        f"<span style='color:{sev_color}'>{sev['level'].upper()} ({sev['score']}/5)</span> "
+        f"<span style='opacity:0.6;font-size:0.8em'>· {mode_badge} · {dr['location']}</span>",
+        unsafe_allow_html=True,
+    )
+    st.write(dr["narrative"])
+
+    rc = dr["root_cause"]
+    if rc["unsupported"]:
+        st.warning("⚠️ Root cause not supported by historical data — treat as provisional.")
+    st.markdown(f"**Root cause** ({rc['confidence']} confidence): {rc['primary_cause']}")
+    if rc["contributing_factors"]:
+        st.markdown("Contributing factors: " + ", ".join(rc["contributing_factors"]))
+    if rc["evidence_basis"]:
+        st.caption("📖 Evidence: " + ", ".join(rc["evidence_basis"]))
+
+    ca = dr["corrective_action"]
+    with st.expander("Corrective action"):
+        st.markdown(f"**Immediate:** {ca['immediate']}")
+        st.markdown(f"**Process adjustment:** {ca['process_adjustment']}")
+        st.markdown(f"**Re-inspection:** {ca['re_inspection']}")
+        if ca.get("ipc_reference"):
+            st.caption(f"IPC reference: {ca['ipc_reference']}")
+    st.divider()
+
+
+def _render_inspection_report(report: dict) -> None:
+    """Render a full Phase 4 InspectionReport with headline metrics and per-defect reports."""
+    meta = report["generation_metadata"]
+    overall = report["overall_severity"]
+    sev_color = SEVERITY_COLORS.get(overall, "#3498db")
+
+    st.markdown(
+        f"### Inspection Report "
+        f"<span style='color:{sev_color}'>● {overall.upper()}</span>",
+        unsafe_allow_html=True,
+    )
+    if meta["generation_mode"] == "fallback":
+        st.info(
+            "Running in **fallback mode** (no LLM). Reports use static templates. "
+            "Install Ollama and `ollama pull llama3.2`, then restart the API, for generated narratives."
+        )
+    if report["requires_human_review"]:
+        st.warning("⚠️ This board requires human review (one or more defects were flagged).")
+
+    cols = st.columns(4)
+    cols[0].metric("Total defects", report["total_defects"])
+    cols[1].metric("Overall severity", overall)
+    cols[2].metric("Mode", meta["generation_mode"])
+    cols[3].metric("Fallback count", meta["fallback_count"])
+
+    for dr in report["defect_reports"]:
+        _render_defect_report(dr)
+
+    st.caption(f"Report ID: {report['report_id']} · generated {report['generated_at']}")
+
+
 def main() -> None:
     st.title("PCB Defect Analyzer")
     st.caption("Upload a PCB image to detect defects and retrieve matching historical cases and standards.")
@@ -142,6 +215,16 @@ def main() -> None:
                 st.error("Model not loaded — train a model first (see README).")
         except requests.exceptions.RequestException:
             st.error(f"Cannot reach API at {api_url}. Is uvicorn running?")
+
+        # Phase 4 report-generator status (LLM vs fallback).
+        try:
+            rh = requests.get(f"{api_url}/report/health", timeout=3).json()
+            if rh.get("llm_available"):
+                st.success(f"Report LLM ✓ ({rh.get('model')})")
+            else:
+                st.warning("Report: fallback mode (no LLM)")
+        except requests.exceptions.RequestException:
+            pass
 
         st.divider()
         conf_threshold = st.slider(
@@ -233,6 +316,14 @@ def main() -> None:
         st.session_state["last_detections"] = detect_resp.json().get("detections", [])
         st.session_state["last_result"] = analyze_resp.json()
         st.session_state["last_image"] = original_image
+        # Stash the request payload so the report can be generated on demand without re-uploading.
+        st.session_state["last_payload"] = {
+            "filename": filename,
+            "content_type": content_type,
+            "image_bytes": image_bytes,
+            "params": params,
+        }
+        st.session_state.pop("last_report", None)  # invalidate any stale report
 
     if "last_result" in st.session_state:
         body = st.session_state["last_result"]
@@ -269,6 +360,38 @@ def main() -> None:
         st.divider()
         for res in body["results"]:
             _render_result_card(res)
+
+        # --- Phase 4: inspection report ---
+        st.divider()
+        st.subheader("📝 Inspection Report")
+        payload = st.session_state.get("last_payload")
+        if body["total_detections"] == 0:
+            st.info("No defects detected — no report to generate.")
+        elif payload is not None:
+            if st.button("Generate inspection report"):
+                with st.spinner("Generating inspection report..."):
+                    try:
+                        report_resp = requests.post(
+                            f"{api_url}/report",
+                            params=payload["params"],
+                            files={"file": (payload["filename"], payload["image_bytes"], payload["content_type"])},
+                            timeout=180,  # allow headroom for a slow local LLM
+                        )
+                    except requests.exceptions.RequestException as exc:
+                        st.error(f"Report request failed: {exc}")
+                        report_resp = None
+                if report_resp is not None:
+                    if report_resp.status_code == 200:
+                        st.session_state["last_report"] = report_resp.json()
+                    else:
+                        try:
+                            detail = report_resp.json().get("detail", report_resp.text)
+                        except ValueError:
+                            detail = report_resp.text
+                        st.error(f"API error on /report ({report_resp.status_code}): {detail}")
+
+            if "last_report" in st.session_state:
+                _render_inspection_report(st.session_state["last_report"])
 
 
 if __name__ == "__main__":
