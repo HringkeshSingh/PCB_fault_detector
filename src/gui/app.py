@@ -13,12 +13,14 @@ Run:
 from __future__ import annotations
 
 import io
+import os
 
 import requests
 import streamlit as st
 from PIL import Image, ImageDraw, ImageFont
 
-API_URL_DEFAULT = "http://127.0.0.1:8000"
+# PCB_API_URL lets a container point the GUI at the API service (e.g. http://api:8000).
+API_URL_DEFAULT = os.environ.get("PCB_API_URL", "http://127.0.0.1:8000")
 
 CONFIDENCE_COLORS = {
     "high": "#2ecc71",

@@ -1,0 +1,33 @@
+# Keep the build context small: only src/, data/cases/, models/best.pt and
+# requirements.txt are copied into the image.
+.git/
+.gitignore
+.venv/
+venv/
+env/
+.claude/
+.idea/
+.vscode/
+**/__pycache__/
+**/*.py[cod]
+.pytest_cache/
+
+chroma_db/
+data/raw/
+data/processed/
+data/processed_finetune/
+VOC_PCB.zip
+runs/
+models/deeppcb/
+models/pcb_finetune_real*/
+models/runs/
+yolov8*.pt
+
+notebooks/
+tests/
+scripts/
+*.log
+.env
+.env.*
+Dockerfile
+docker-compose.yml

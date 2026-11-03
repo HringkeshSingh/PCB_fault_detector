@@ -18,6 +18,7 @@
 
 - [What This Does](#-what-this-does)
 - [Quick Start (End-to-End)](#-quick-start-end-to-end)
+- [Running with Docker](#-running-with-docker)
 - [Pretrained Model](#-pretrained-model)
 - [Architecture](#-architecture)
 - [Project Structure](#-project-structure)
@@ -147,6 +148,33 @@ ollama pull llama3.2
 ```
 
 Restart the API and it auto-detects the model — `GET /report/health` flips to `llm_available: true`. See [Report Generation](#-report-generation-phase-4--local-llm) for details.
+
+---
+
+## 🐳 Running with Docker
+
+The quickest way to run the app — only [Docker Desktop](https://www.docker.com/products/docker-desktop/) is needed (no Python install). The image bundles the pretrained `models/best.pt`, CPU-only PyTorch, the embedding model, and a pre-built ChromaDB, so containers start ready to analyze.
+
+```bash
+# API + GUI (reports use fallback templates)
+docker compose up --build -d
+
+# API + GUI + local Ollama for LLM-written reports (first run downloads llama3.2, ~2 GB)
+docker compose --profile llm up --build -d
+```
+
+- GUI: `http://localhost:8501` · API docs: `http://localhost:8000/docs`
+- Stop: `docker compose down` (add `--profile llm` if you started with it). The downloaded Ollama model is kept in the `ollama-models` volume.
+- Use a different LLM: `OLLAMA_MODEL=qwen2.5:3b docker compose --profile llm up -d`.
+- The API checks for Ollama only at startup, so with the `llm` profile it waits until the model pull finishes before starting.
+- Changes to `src/`, `models/best.pt`, or `data/cases/historical_cases.json` require a rebuild (`--build`) — the vector store is built into the image from the cases file.
+- The image is CPU-only. It's meant for running inference, not training.
+
+| File | Purpose |
+|------|---------|
+| `Dockerfile` | One image for both services: Python 3.11-slim, CPU torch, requirements, ChromaDB ingested at build time, runs as non-root |
+| `docker-compose.yml` | `api` (port 8000, health-checked), `gui` (port 8501, `PCB_API_URL=http://api:8000`), and optional `ollama` + `ollama-pull` under the `llm` profile |
+| `.dockerignore` | Keeps the venv, datasets, training runs, and git history out of the build context |
 
 ---
 

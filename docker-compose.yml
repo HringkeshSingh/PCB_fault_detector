@@ -1,0 +1,67 @@
+# PCB Defect Report Generator
+#
+#   docker compose up --build                 # API + GUI (reports use fallback templates)
+#   docker compose --profile llm up --build   # + local Ollama for LLM-written reports
+#
+# GUI: http://localhost:8501   API docs: http://localhost:8000/docs
+
+services:
+  api:
+    build: .
+    image: pcb-fault-detector:latest
+    environment:
+      OLLAMA_HOST: http://ollama:11434
+      OLLAMA_MODEL: ${OLLAMA_MODEL:-llama3.2}
+    ports:
+      - "8000:8000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health', timeout=5)"]
+      interval: 10s
+      timeout: 6s
+      start_period: 90s
+      retries: 5
+    # The API checks for Ollama only once at startup, so with the llm profile it
+    # waits for the model pull to finish. Without the profile this is skipped.
+    depends_on:
+      ollama-pull:
+        condition: service_completed_successfully
+        required: false
+    restart: unless-stopped
+
+  gui:
+    image: pcb-fault-detector:latest
+    command: ["streamlit", "run", "src/gui/app.py", "--server.port", "8501", "--server.address", "0.0.0.0", "--server.headless", "true"]
+    environment:
+      PCB_API_URL: http://api:8000
+    ports:
+      - "8501:8501"
+    depends_on:
+      api:
+        condition: service_healthy
+    restart: unless-stopped
+
+  ollama:
+    image: ollama/ollama:latest
+    profiles: ["llm"]
+    volumes:
+      - ollama-models:/root/.ollama
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+    restart: unless-stopped
+
+  # One-shot: downloads the model into the shared volume (instant once cached).
+  ollama-pull:
+    image: ollama/ollama:latest
+    profiles: ["llm"]
+    entrypoint: ["ollama", "pull", "${OLLAMA_MODEL:-llama3.2}"]
+    environment:
+      OLLAMA_HOST: http://ollama:11434
+    depends_on:
+      ollama:
+        condition: service_healthy
+
+volumes:
+  ollama-models:
